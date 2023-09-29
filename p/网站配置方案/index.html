@@ -2,29 +2,29 @@
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='框架 - Hugo 选择这个框架的原因，主要还是感觉大家更加推崇这个框架，虽然模板比较少，但是渲染速度快（对于以后有长期更新需求的来说，这点很关键），而且部署比较方便，Github 上 star 数量排静态博客第一，这种时候相信大多数人的选择一般不会有太大问题。
-1. 基础安装 组装工具之前，先把零件准备好，这几个都是成熟的东西，安装很简单，一直点继续就行
+基础安装 组装工具之前，先把零件准备好，这几个都是成熟的东西，安装很简单，一直点继续就行
 Go Git Hugo 这里安装完后要添加到系统环境变量，点进去后是放到环境变量的 PATH 中，这点坑了我好久。
 测试是否安装成功
-1 2 3 4 &amp;gt; hugo version hugo v0.108.0-a0d64a46e36dd2f503bfd5ba1a5807b900df231d windows/amd64 BuildDate=2022-12-06T13:37:56Z VendorInfo=gohugoio &amp;gt; go version go version go1.19.4 windows/amd64 2. 生成基础配置 1 2 3 4 5 6 7 8 9 10 11 12 13 hugo new site &amp;#39;name&amp;#39; # 初始化网站 ls # 这里是相关文件夹的作用 archetypes # markdown文件的 Front matter 格式 assets content # 存放内容的文件夹 data # 存放数据文件，一般是 json 文件 layouts # 模板文件 public # 真正上传到 github 的部分，渲染后的静态页面 static # 存放静态文件，比如css、js、img等文件目录，Hugo在渲染时，会直接将static目录下的文件直接复制到public目录下，不会做任何渲染。 themes # 存放网站主题，可以下载多个主题，themes目录下的每个子目录代表了一个主题，可以通过在config.'>
+1 2 3 4 &amp;gt; hugo version hugo v0.108.0-a0d64a46e36dd2f503bfd5ba1a5807b900df231d windows/amd64 BuildDate=2022-12-06T13:37:56Z VendorInfo=gohugoio &amp;gt; go version go version go1.19.4 windows/amd64 生成基础配置 1 2 3 4 5 6 7 8 9 10 11 12 13 hugo new site &amp;#39;name&amp;#39; # 初始化网站 ls # 这里是相关文件夹的作用 archetypes # markdown文件的 Front matter 格式 assets content # 存放内容的文件夹 data # 存放数据文件，一般是 json 文件 layouts # 模板文件 public # 真正上传到 github 的部分，渲染后的静态页面 static # 存放静态文件，比如css、js、img等文件目录，Hugo在渲染时，会直接将static目录下的文件直接复制到public目录下，不会做任何渲染。 themes # 存放网站主题，可以下载多个主题，themes目录下的每个子目录代表了一个主题，可以通过在config.'>
 <title>网站配置方案</title>
 
 <link rel='canonical' href='https://kanrw.github.io/p/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88/'>
 
 <link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='网站配置方案'>
 <meta property='og:description' content='框架 - Hugo 选择这个框架的原因，主要还是感觉大家更加推崇这个框架，虽然模板比较少，但是渲染速度快（对于以后有长期更新需求的来说，这点很关键），而且部署比较方便，Github 上 star 数量排静态博客第一，这种时候相信大多数人的选择一般不会有太大问题。
-1. 基础安装 组装工具之前，先把零件准备好，这几个都是成熟的东西，安装很简单，一直点继续就行
+基础安装 组装工具之前，先把零件准备好，这几个都是成熟的东西，安装很简单，一直点继续就行
 Go Git Hugo 这里安装完后要添加到系统环境变量，点进去后是放到环境变量的 PATH 中，这点坑了我好久。
 测试是否安装成功
-1 2 3 4 &amp;gt; hugo version hugo v0.108.0-a0d64a46e36dd2f503bfd5ba1a5807b900df231d windows/amd64 BuildDate=2022-12-06T13:37:56Z VendorInfo=gohugoio &amp;gt; go version go version go1.19.4 windows/amd64 2. 生成基础配置 1 2 3 4 5 6 7 8 9 10 11 12 13 hugo new site &amp;#39;name&amp;#39; # 初始化网站 ls # 这里是相关文件夹的作用 archetypes # markdown文件的 Front matter 格式 assets content # 存放内容的文件夹 data # 存放数据文件，一般是 json 文件 layouts # 模板文件 public # 真正上传到 github 的部分，渲染后的静态页面 static # 存放静态文件，比如css、js、img等文件目录，Hugo在渲染时，会直接将static目录下的文件直接复制到public目录下，不会做任何渲染。 themes # 存放网站主题，可以下载多个主题，themes目录下的每个子目录代表了一个主题，可以通过在config.'>
+1 2 3 4 &amp;gt; hugo version hugo v0.108.0-a0d64a46e36dd2f503bfd5ba1a5807b900df231d windows/amd64 BuildDate=2022-12-06T13:37:56Z VendorInfo=gohugoio &amp;gt; go version go version go1.19.4 windows/amd64 生成基础配置 1 2 3 4 5 6 7 8 9 10 11 12 13 hugo new site &amp;#39;name&amp;#39; # 初始化网站 ls # 这里是相关文件夹的作用 archetypes # markdown文件的 Front matter 格式 assets content # 存放内容的文件夹 data # 存放数据文件，一般是 json 文件 layouts # 模板文件 public # 真正上传到 github 的部分，渲染后的静态页面 static # 存放静态文件，比如css、js、img等文件目录，Hugo在渲染时，会直接将static目录下的文件直接复制到public目录下，不会做任何渲染。 themes # 存放网站主题，可以下载多个主题，themes目录下的每个子目录代表了一个主题，可以通过在config.'>
 <meta property='og:url' content='https://kanrw.github.io/p/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88/'>
 <meta property='og:site_name' content='Kanrw'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-09-29T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-09-29T00:00:00&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Go' /><meta property='article:tag' content='Hugo' /><meta property='article:published_time' content='2023-09-29T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-09-29T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="网站配置方案">
 <meta name="twitter:description" content="框架 - Hugo 选择这个框架的原因，主要还是感觉大家更加推崇这个框架，虽然模板比较少，但是渲染速度快（对于以后有长期更新需求的来说，这点很关键），而且部署比较方便，Github 上 star 数量排静态博客第一，这种时候相信大多数人的选择一般不会有太大问题。
-1. 基础安装 组装工具之前，先把零件准备好，这几个都是成熟的东西，安装很简单，一直点继续就行
+基础安装 组装工具之前，先把零件准备好，这几个都是成熟的东西，安装很简单，一直点继续就行
 Go Git Hugo 这里安装完后要添加到系统环境变量，点进去后是放到环境变量的 PATH 中，这点坑了我好久。
 测试是否安装成功
-1 2 3 4 &amp;gt; hugo version hugo v0.108.0-a0d64a46e36dd2f503bfd5ba1a5807b900df231d windows/amd64 BuildDate=2022-12-06T13:37:56Z VendorInfo=gohugoio &amp;gt; go version go version go1.19.4 windows/amd64 2. 生成基础配置 1 2 3 4 5 6 7 8 9 10 11 12 13 hugo new site &amp;#39;name&amp;#39; # 初始化网站 ls # 这里是相关文件夹的作用 archetypes # markdown文件的 Front matter 格式 assets content # 存放内容的文件夹 data # 存放数据文件，一般是 json 文件 layouts # 模板文件 public # 真正上传到 github 的部分，渲染后的静态页面 static # 存放静态文件，比如css、js、img等文件目录，Hugo在渲染时，会直接将static目录下的文件直接复制到public目录下，不会做任何渲染。 themes # 存放网站主题，可以下载多个主题，themes目录下的每个子目录代表了一个主题，可以通过在config.">
+1 2 3 4 &amp;gt; hugo version hugo v0.108.0-a0d64a46e36dd2f503bfd5ba1a5807b900df231d windows/amd64 BuildDate=2022-12-06T13:37:56Z VendorInfo=gohugoio &amp;gt; go version go version go1.19.4 windows/amd64 生成基础配置 1 2 3 4 5 6 7 8 9 10 11 12 13 hugo new site &amp;#39;name&amp;#39; # 初始化网站 ls # 这里是相关文件夹的作用 archetypes # markdown文件的 Front matter 格式 assets content # 存放内容的文件夹 data # 存放数据文件，一般是 json 文件 layouts # 模板文件 public # 真正上传到 github 的部分，渲染后的静态页面 static # 存放静态文件，比如css、js、img等文件目录，Hugo在渲染时，会直接将static目录下的文件直接复制到public目录下，不会做任何渲染。 themes # 存放网站主题，可以下载多个主题，themes目录下的每个子目录代表了一个主题，可以通过在config.">
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -196,16 +196,21 @@ Go Git Hugo 这里安装完后要添加到系统环境变量，点进去后是�
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#1-基础安装">1. 基础安装</a></li>
-    <li><a href="#2-生成基础配置">2. 生成基础配置</a></li>
-    <li><a href="#3-下载主题并调整">3. 下载主题并调整</a></li>
-    <li><a href="#4-填充内容">4. 填充内容</a></li>
-    <li><a href="#5-预览界面">5. 预览界面</a></li>
-    <li><a href="#6-生成静态页面">6. 生成静态页面</a></li>
-  </ol>
-
-  <ol>
-    <li><a href="#推送到-github">推送到 <code>Github</code></a></li>
+    <li><a href="#框架---hugo">框架 - Hugo</a>
+      <ol>
+        <li><a href="#基础安装">基础安装</a></li>
+        <li><a href="#生成基础配置">生成基础配置</a></li>
+        <li><a href="#下载主题并调整">下载主题并调整</a></li>
+        <li><a href="#填充内容">填充内容</a></li>
+        <li><a href="#预览界面">预览界面</a></li>
+        <li><a href="#生成静态页面">生成静态页面</a></li>
+      </ol>
+    </li>
+    <li><a href="#github-pages"><code>GitHub Pages</code></a>
+      <ol>
+        <li><a href="#推送到-github">推送到 <code>Github</code></a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -221,6 +226,14 @@ Go Git Hugo 这里安装完后要添加到系统环境变量，点进去后是�
     <header class="article-header">
 
     <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/technics/" >
+                Technics
+            </a>
+        
+    </header>
     
 
     <div class="article-title-wrapper">
@@ -265,7 +278,7 @@ Go Git Hugo 这里安装完后要添加到系统环境变量，点进去后是�
     
     <h1 id="框架---hugo">框架 - Hugo</h1>
 <p><strong>选择这个框架的原因</strong>，主要还是感觉大家更加推崇这个框架，虽然模板比较少，但是渲染速度快（对于以后有长期更新需求的来说，这点很关键），而且部署比较方便，Github 上 star 数量排静态博客第一，这种时候相信大多数人的选择一般不会有太大问题。</p>
-<h2 id="1-基础安装">1. 基础安装</h2>
+<h2 id="基础安装">基础安装</h2>
 <p>组装工具之前，先把零件准备好，这几个都是成熟的东西，安装很简单，一直点继续就行</p>
 <ol>
 <li><code>Go</code></li>
@@ -288,7 +301,7 @@ Go Git Hugo 这里安装完后要添加到系统环境变量，点进去后是�
 </span></span><span class="line"><span class="cl">go version go1.19.4 windows/amd64
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="2-生成基础配置">2. 生成基础配置</h2>
+</div><h2 id="生成基础配置">生成基础配置</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -321,11 +334,11 @@ Go Git Hugo 这里安装完后要添加到系统环境变量，点进去后是�
 </span></span><span class="line"><span class="cl">config.toml <span class="c1"># 站点全局的参数配置文件</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="3-下载主题并调整">3. 下载主题并调整</h2>
+</div><h2 id="下载主题并调整">下载主题并调整</h2>
 <p>主题到官方网站下载 <a class="link" href="https://themes.gohugo.io/"  target="_blank" rel="noopener"
     >Complete List | Hugo Themes</a></p>
-<h2 id="4-填充内容">4. 填充内容</h2>
-<h2 id="5-预览界面">5. 预览界面</h2>
+<h2 id="填充内容">填充内容</h2>
+<h2 id="预览界面">预览界面</h2>
 <p>即使只是刚刚下载好主题，网站内空空如也，肯定也忍不住先看一眼它长什么样，以后会经常这么操作，来回修改。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -337,7 +350,7 @@ Go Git Hugo 这里安装完后要添加到系统环境变量，点进去后是�
 </div>
 </div><p>然后用浏览器打开<a class="link" href="http://localhost:1313/"  target="_blank" rel="noopener"
     >本地网页</a></p>
-<h2 id="6-生成静态页面">6. 生成静态页面</h2>
+<h2 id="生成静态页面">生成静态页面</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -359,6 +372,14 @@ Go Git Hugo 这里安装完后要添加到系统环境变量，点进去后是�
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/go/">Go</a>
+        
+            <a href="/tags/hugo/">Hugo</a>
+        
+    </section>
+
 
     </footer>
 
