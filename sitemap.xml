@@ -3,7 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kanrw.github.io/</loc>
-    <lastmod>2023-09-29T00:00:00+00:00</lastmod>
+    <lastmod>2023-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kanrw.github.io/tags/crash/</loc>
+    <lastmod>2023-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kanrw.github.io/p/crash%E5%86%99%E4%BD%9C%E6%B3%95/</loc>
+    <lastmod>2023-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kanrw.github.io/post/</loc>
+    <lastmod>2023-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kanrw.github.io/tags/</loc>
+    <lastmod>2023-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kanrw.github.io/tags/workflow/</loc>
+    <lastmod>2023-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kanrw.github.io/tags/writing/</loc>
+    <lastmod>2023-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kanrw.github.io/tags/%E7%9F%B3%E9%BB%91%E4%B8%80%E9%9B%84/</loc>
+    <lastmod>2023-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kanrw.github.io/tags/photography/</loc>
+    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kanrw.github.io/p/%E7%9B%B8%E6%9C%BA%E9%80%89%E8%B4%AD%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kanrw.github.io/categories/</loc>
     <lastmod>2023-09-29T00:00:00+00:00</lastmod>
@@ -12,12 +39,6 @@
     <lastmod>2023-09-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kanrw.github.io/tags/hugo/</loc>
-    <lastmod>2023-09-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kanrw.github.io/post/</loc>
-    <lastmod>2023-09-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kanrw.github.io/tags/</loc>
     <lastmod>2023-09-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kanrw.github.io/categories/technics/</loc>

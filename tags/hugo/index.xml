@@ -99,6 +99,8 @@
 &lt;h1 id=&#34;github-pages&#34;&gt;&lt;code&gt;GitHub Pages&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;GitHubPages&lt;/code&gt; 是一项静态站点托管服务，它直接从 GitHub 上的仓库获取 index. html、HTML、CSS 和 JavaScript 文件，也可以通过构建过程运行文件，然后发布网站。我们使用 &lt;code&gt;GitHubPages&lt;/code&gt; 搭建个人网站。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;一个很重要的点是，&lt;code&gt;hugo&lt;/code&gt; 生成的网站内容在文件夹下的 &lt;code&gt;public&lt;/code&gt; 之中&lt;/strong&gt;，所以别人 &lt;code&gt;git&lt;/code&gt; 的命令都是先切进这个文件夹，外面的文件夹我想叫什么都无所谓。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://kanrw.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Here is my website!&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;推送到-github&#34;&gt;推送到 &lt;code&gt;Github&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;网站配置好，就需要推送到 &lt;code&gt;GitHub&lt;/code&gt; 才能让别人也看到。&lt;/p&gt;
 &lt;p&gt;由于网络的原因，所以还是用 &lt;code&gt;ssh&lt;/code&gt; 的方式连接账户比较的稳定。&lt;/p&gt;
