@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" Abacus 相关软件的手册 新人使用注意事项\nIntroduction ABACUS 是一个可以选择平面波 pw 基组或者 LCAO 原子轨道基组进行 DFT 计算的软件包。\nLCAO 基组的好处是相对平面波基组更小，因此计算的效率更高，虽然精度相对会低一点，相当于在计算速度和精度之间重新寻找了一个平衡点。\n除此之外，由于使用原子轨道基，在一些特定的情况下，例如计算 BPVE 体光伏效应的时候，不用再使用 wannier90 拟合哈密顿量，减少了误差出现的可能性，优化工作流。\n并且在这个生态下还有其他的软件可以方便的使用，例如 DeePMD、PYATB 等等。\nBohrium Chat 有什么问题可以问他们社区的 GPT。\n下面是官方介绍\nABACUS (Atomic-orbital Based Ab-initio Computation at UStc) is an open-source computer code package aiming for large-scale electronic-structure simulations from first principles, developed at the Key Laboratory of Quantum Information and Supercomputing Center, University of Science and Technology of China (USTC) - Computer Network and Information Center, Chinese of Academy (CNIC of CAS).\n">
+<title>ABACUS简明手册</title>
+
+<link rel='canonical' href='http://localhost:1313/p/abacus%E7%AE%80%E6%98%8E%E6%89%8B%E5%86%8C/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="ABACUS简明手册">
+<meta property='og:description' content=" Abacus 相关软件的手册 新人使用注意事项\nIntroduction ABACUS 是一个可以选择平面波 pw 基组或者 LCAO 原子轨道基组进行 DFT 计算的软件包。\nLCAO 基组的好处是相对平面波基组更小，因此计算的效率更高，虽然精度相对会低一点，相当于在计算速度和精度之间重新寻找了一个平衡点。\n除此之外，由于使用原子轨道基，在一些特定的情况下，例如计算 BPVE 体光伏效应的时候，不用再使用 wannier90 拟合哈密顿量，减少了误差出现的可能性，优化工作流。\n并且在这个生态下还有其他的软件可以方便的使用，例如 DeePMD、PYATB 等等。\nBohrium Chat 有什么问题可以问他们社区的 GPT。\n下面是官方介绍\nABACUS (Atomic-orbital Based Ab-initio Computation at UStc) is an open-source computer code package aiming for large-scale electronic-structure simulations from first principles, developed at the Key Laboratory of Quantum Information and Supercomputing Center, University of Science and Technology of China (USTC) - Computer Network and Information Center, Chinese of Academy (CNIC of CAS).\n">
+<meta property='og:url' content='http://localhost:1313/p/abacus%E7%AE%80%E6%98%8E%E6%89%8B%E5%86%8C/'>
+<meta property='og:site_name' content='Kanrw'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='DFT' /><meta property='article:published_time' content='2024-02-03T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-02-03T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="ABACUS简明手册">
+<meta name="twitter:description" content=" Abacus 相关软件的手册 新人使用注意事项\nIntroduction ABACUS 是一个可以选择平面波 pw 基组或者 LCAO 原子轨道基组进行 DFT 计算的软件包。\nLCAO 基组的好处是相对平面波基组更小，因此计算的效率更高，虽然精度相对会低一点，相当于在计算速度和精度之间重新寻找了一个平衡点。\n除此之外，由于使用原子轨道基，在一些特定的情况下，例如计算 BPVE 体光伏效应的时候，不用再使用 wannier90 拟合哈密顿量，减少了误差出现的可能性，优化工作流。\n并且在这个生态下还有其他的软件可以方便的使用，例如 DeePMD、PYATB 等等。\nBohrium Chat 有什么问题可以问他们社区的 GPT。\n下面是官方介绍\nABACUS (Atomic-orbital Based Ab-initio Computation at UStc) is an open-source computer code package aiming for large-scale electronic-structure simulations from first principles, developed at the Key Laboratory of Quantum Information and Supercomputing Center, University of Science and Technology of China (USTC) - Computer Network and Information Center, Chinese of Academy (CNIC of CAS).\n">
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu2868649394538347273.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Kanrw</a></h1>
+            <h2 class="site-description">Be water, My friend</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#how-to-submit">How to submit</a></li>
+    <li><a href="#辅助软件-用于准备相应输入文件">辅助软件-用于准备相应输入文件</a>
+      <ol>
+        <li><a href="#atomkit"><code>atomkit</code></a></li>
+        <li><a href="#dpdata"><code>dpdata</code></a></li>
+      </ol>
+    </li>
+    <li><a href="#赝势和轨道文件-pseudo_dir-and-orbital_dir">赝势和轨道文件 <code>pseudo_dir</code> and <code>orbital_dir</code></a></li>
+    <li><a href="#input-files">Input Files</a>
+      <ol>
+        <li><a href="#input-基本参数"><code>INPUT</code> 基本参数</a></li>
+        <li><a href="#stru-结构文件"><code>STRU</code> 结构文件</a>
+          <ol>
+            <li><a href="#stru-格式转换-方案-0"><code>STRU</code> 格式转换-方案 0</a></li>
+            <li><a href="#stru-格式转换-方案-1"><code>STRU</code> 格式转换-方案 1</a></li>
+            <li><a href="#stru-格式转换-方案-2"><code>STRU</code> 格式转换-方案 2</a></li>
+          </ol>
+        </li>
+        <li><a href="#kpt-计算网格"><code>KPT</code> 计算网格</a></li>
+      </ol>
+    </li>
+    <li><a href="#结构优化">结构优化</a>
+      <ol>
+        <li><a href="#opt_input"><code>opt_INPUT</code></a></li>
+      </ol>
+    </li>
+    <li><a href="#自洽计算-scf">自洽计算 SCF</a>
+      <ol>
+        <li><a href="#scf_input"><code>scf_INPUT</code></a>
+          <ol>
+            <li><a href="#scf-续算">SCF-续算</a></li>
+          </ol>
+        </li>
+        <li><a href="#scf-输出">SCF-输出</a></li>
+      </ol>
+    </li>
+    <li><a href="#dftu">DFT+U</a></li>
+    <li><a href="#其他">其他</a>
+      <ol>
+        <li><a href="#输出文件">输出文件</a></li>
+        <li><a href="#数据和图像处理">数据和图像处理</a></li>
+      </ol>
+    </li>
+    <li><a href="#一些注意事项">一些注意事项</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/technics/" style="background-color: #2a9d8f; color: #fff;">
+                TECHNICS
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/abacus%E7%AE%80%E6%98%8E%E6%89%8B%E5%86%8C/">ABACUS简明手册</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 03, 2024</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <blockquote>
+<p><a class="link" href="https://abacus.ustc.edu.cn/main.htm"  target="_blank" rel="noopener"
+    >Abacus</a>
+<a class="link" href="https://abacus.ustc.edu.cn/manual/list.htm"  target="_blank" rel="noopener"
+    >相关软件的手册</a>
+<a class="link" href="https://xmywuqhxb0.feishu.cn/docx/KN3KdqbX6o9S6xxtbtCcD5YPnue"  target="_blank" rel="noopener"
+    >新人使用注意事项</a></p>
+</blockquote>
+<h1 id="introduction">Introduction
+</h1><p><code>ABACUS</code> 是一个可以选择平面波 pw 基组或者 LCAO 原子轨道基组进行 DFT 计算的软件包。</p>
+<p>LCAO 基组的好处是相对平面波基组更小，因此计算的效率更高，虽然精度相对会低一点，相当于在计算速度和精度之间重新寻找了一个平衡点。</p>
+<p>除此之外，由于使用原子轨道基，在一些特定的情况下，例如计算 BPVE 体光伏效应的时候，不用再使用 <code>wannier90</code> 拟合哈密顿量，减少了误差出现的可能性，优化工作流。</p>
+<p>并且在这个生态下还有其他的软件可以方便的使用，例如 <code>DeePMD</code>、<code>PYATB</code> 等等。</p>
+<p><strong><a class="link" href="https://bohrium-chat.dp.tech/#/chat"  target="_blank" rel="noopener"
+    >Bohrium Chat</a> 有什么问题可以问他们社区的 GPT</strong>。</p>
+<hr>
+<p>下面是官方介绍</p>
+<blockquote>
+<p>ABACUS (Atomic-orbital Based Ab-initio Computation at UStc) is an open-source computer code package aiming for large-scale electronic-structure simulations from first principles, developed at the Key Laboratory of Quantum Information and Supercomputing Center, University of Science and Technology of China (USTC) - Computer Network and Information Center, Chinese of Academy (CNIC of CAS).</p>
+</blockquote>
+<p>ABACUS currently provides the following features and functionalities:</p>
+<ol>
+<li>Three types of supported basis sets: pw, LCAO, and LCAO-in-pw.</li>
+<li>Ground-state total energy calculations using Kohn-Sham (KS) density functional theory (DFT) with local-density, generalized gradient approximations (LDA/GGAs), Meta-GGA (requires LIBXC, only for PW), and hybrid functionals (PBE0 and HSE06, only for LCAO and currently under test).</li>
+<li>Geometry relaxations with Conjugated Gradient (CG), BFGS, and FIRE methods.</li>
+<li>Semi-empirical van der Waals energy correction using the Grimme DFT-D2/D3 scheme.</li>
+<li>NVT and NVE molecular dynamics simulation. AIMD, DP potential, LJ potential are supported.</li>
+<li>Stress calculation and cell relaxation.</li>
+<li>Electric polarization calculation using Berry Phase theory.</li>
+<li>Interface to the Wannier90 package.</li>
+<li>Real-time time dependent density functional theory (TDDFT).</li>
+<li>Print-out of the electrostatic potential.</li>
+<li>Mulliken charge analysis (only for LCAO).</li>
+<li>Projected density of states (PDOS) (only for LCAO).</li>
+<li>DFT+U calculation (only for LCAO).</li>
+<li>&hellip;</li>
+</ol>
+<h1 id="how-to-submit">How to submit
+</h1><p>Here is a simple script to submit the job.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-job.sh" data-lang="job.sh"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1">#SBATCH -J TASK</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#SBATCH -p sonmi_1 -N 1 -n 40</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">ulimit</span> -s unlimited
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">module load abacus
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;This program is running at&#39;</span>  <span class="sb">`</span>hostname<span class="sb">`</span>
+</span></span><span class="line"><span class="cl">mpirun -n <span class="si">${</span><span class="nv">SLURM_NPROCS</span><span class="si">}</span> abacus
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>由于这个软件使用的是 <code>intel-2023</code> 编译器，因此在有些节点上可能无法使用。</p>
+<h1 id="辅助软件-用于准备相应输入文件">辅助软件-用于准备相应输入文件
+</h1><h2 id="atomkit"><code>atomkit</code>
+</h2><p>和 <code>vaspkit</code> 是同一个开发组，使用方式也一样，以前用 <code>vaspkit</code> 的同学可以无缝衔接。但是 <code>atomkit</code> 还在测试中，需要加 qq 群获取安装包，有需要的可以联系管理员。
+（或者我有空装到 <code>module</code> 中）</p>
+<h2 id="dpdata"><code>dpdata</code>
+</h2><p>![[dpdata-handbook#Introduction]]</p>
+<h1 id="赝势和轨道文件-pseudo_dir-and-orbital_dir">赝势和轨道文件 <code>pseudo_dir</code> and <code>orbital_dir</code>
+</h1><blockquote>
+<p><a class="link" href="https://xmywuqhxb0.feishu.cn/docx/M6M2dJj4moBL05xaMtLc8sf1nub"  target="_blank" rel="noopener"
+    >轨道文件的基本说明</a></p>
+</blockquote>
+<ul>
+<li>在 INPUT 文件中用 <code>basis_type</code> 来确定是平面波基组（pw）还是原子轨道的线性组合（lcao），<strong>默认是前者</strong>，使用后者要在 STRU 文件中写入原子轨道基组的信息</li>
+<li>ABACUS 没有 POTCAR 文件，而是将 POTCAR 文件变成地址调用，在 INPUT 中写好地址，STRU 文件中选择调用的具体文件名，轨道信息也是如此</li>
+</ul>
+<p>计算需要赝势库 <a class="link" href="https://abacus.ustc.edu.cn/pseudo/list.htm"  target="_blank" rel="noopener"
+    >PSEUDOPOTENTIALS AND ORBITALS</a></p>
+<p><img src="/Pasted%20image%2020240109171014.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pseudo_dir          /share/home/wangml/SG15_ONCV_v1.0_upf
+</span></span><span class="line"><span class="cl">orbital_dir         /share/home/wangml/SG15-Version1p0__StandardOrbitals-Version2p0
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol>
+<li>训练 DP 势需要先进行收敛性测试，需要下载的是包含所有轨道基组的包，而不是只包含推荐设置的 standard 的包。（<em>但是 <code>atomkit</code> 自动转换的 <code>STRU</code> 只能指定 standard 版本的轨道文件，如欲测试其他轨道文件，需手动修改</em>）</li>
+<li>下载完成后通过轨道文件的名字判断该轨道的精度等级（以 Si 为例）：![[Pasted image 20240126131643.png]]</li>
+<li><strong>DZP 精度&lt;TZDP， DZP 效率优于 TZDP</strong></li>
+<li>“Si_gga_6au_100Ry_2s2p1d. Orb”
+1. <code>Si</code> : 元素名，需要确认和赝势中元素相同
+2. <code>gga</code>：对应的赝势中的交换关联泛函版本，目前只提供了 GGA-PBE 的
+3. <code>6au</code>：轨道截断半径，越小越快，越大越准，需要收敛性测试
+4. <code>100Ry</code>：说明精度锚定的是 <code>ecutwfc = 100Ry</code> 的 PW 基组计算结果，作为参数设置推荐值，ecutwfc 不需要进行收敛性测试
+5. <code>2s2p1d</code>：轨道文件中包含的轨道数量，越多越准，越少越快，不需要收敛性测试，只需要判断 scf 收敛的电子结构性质结果精度是否符合需求，一般来说 DZP 是够用的，不排除特例。</li>
+</ol>
+<p>和 PW 基组一样，对 k 点的收敛性测试也是需要的。</p>
+<h1 id="input-files">Input Files
+</h1><blockquote>
+<p><a class="link" href="https://abacus.deepmodeling.com/en/latest/quick_start/input.html"  target="_blank" rel="noopener"
+    >Brief Introduction of the Input Files — ABACUS documentation</a>
+<a class="link" href="https://www.bilibili.com/video/BV1Bc41147vg/?spm_id_from=333.337.search-card.all.click&amp;vd_source=a927cbf9ea7106abc8e72b377926f35e"  target="_blank" rel="noopener"
+    >周巍青：密度泛函理论与ABACUS简介_哔哩哔哩_bilibili</a></p>
+</blockquote>
+<h2 id="input-基本参数"><code>INPUT</code> 基本参数
+</h2><p>需要注意，<strong>这个软件的单位和 <code>vasp</code> 不一样，例如 <code>ecutwfc</code></strong>。因此在<strong>进行参数转换的时候一定一定要慎重</strong>。</p>
+<p>简单的 <code>INPUT</code> 文件如下所示</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">INPUT_PARAMETERS
+</span></span><span class="line"><span class="cl">suffix                  MgO # the name of system
+</span></span><span class="line"><span class="cl">ntype                   2 # how many types of elements in the unit cell
+</span></span><span class="line"><span class="cl">pseudo_dir              ./
+</span></span><span class="line"><span class="cl">orbital_dir		./
+</span></span><span class="line"><span class="cl">ecutwfc                 100             # Rydberg
+</span></span><span class="line"><span class="cl">scf_thr                 1e-4		# Rydberg
+</span></span><span class="line"><span class="cl">basis_type              lcao            
+</span></span><span class="line"><span class="cl">calculation             scf		# this is the key parameter telling abacus to do a scf calculation
+</span></span><span class="line"><span class="cl">out_chg			True
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<p><code>INPUT</code> 文件需要以 <code>INPUT_PARAMETERS</code> 先行词开头，该词前面的内容都会被忽略掉。输入参数有很多, 具体请查看手册，这里列举几种情况的输入文件怎么写。
+下面整理一些常用的参数</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">参数名</th>
+          <th style="text-align: center">取值 (VASP 中对应的取值))</th>
+          <th style="text-align: center">注释</th>
+          <th style="text-align: center">VASP</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">scf_thr</td>
+          <td style="text-align: center">实数</td>
+          <td style="text-align: center">电荷密度收敛条件，计算两次电子步的电荷密度差值，来确定是否退出电子迭代，与 vasp 中的 EDIFF 起到的作用一样</td>
+          <td style="text-align: center">EDIFF</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">suffix</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center">系统名称</td>
+          <td style="text-align: center">SYSTEM</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">ntype</td>
+          <td style="text-align: center">实数</td>
+          <td style="text-align: center">原子种类数，可以不设置，ABACUS 会根据 STRU 文件来自动确定原子种类会</td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">pseudo_dir</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center">赝势文件地址</td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">orbital_dir</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center">轨道文件地址（pw 基组可以不写）</td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">ecutwfc</td>
+          <td style="text-align: center">如果选的是 lcao 基组，那么最好和轨道文件选取一致（看文件名）</td>
+          <td style="text-align: center">平面波的截断能，这里的单位是 Ry</td>
+          <td style="text-align: center">ENCUT</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">basis_type</td>
+          <td style="text-align: center">lcao/pw</td>
+          <td style="text-align: center">基组的选取</td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">calculation</td>
+          <td style="text-align: center">Tip 1</td>
+          <td style="text-align: center">计算的类型</td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">init_chg</td>
+          <td style="text-align: center">Tip 2</td>
+          <td style="text-align: center">初始电荷密度的设置</td>
+          <td style="text-align: center">ICHARG</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">init_wfc</td>
+          <td style="text-align: center">Tip 2</td>
+          <td style="text-align: center">初始波函数的设置，只有选了 pw 基组才需要设置 w</td>
+          <td style="text-align: center">ISTART</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">out_chg</td>
+          <td style="text-align: center">T/F</td>
+          <td style="text-align: center">是否输出电荷密度文件</td>
+          <td style="text-align: center">LCHARG</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">out_wfc_pw</td>
+          <td style="text-align: center">0/1/2</td>
+          <td style="text-align: center">是否输出波函数</td>
+          <td style="text-align: center">LWAVE</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">scf_nmax</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center">电子步的最大值</td>
+          <td style="text-align: center">NELM</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">smearing_method</td>
+          <td style="text-align: center">fixed（ISMEAR=-2）/gauss （ISMEAR=0）/mp （ISMEAR&gt;0）/fd（ISMEAR=-1）)</td>
+          <td style="text-align: center">轨道占据的方式</td>
+          <td style="text-align: center">ISMEAR</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">smearing_sigma</td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center">the width of the smearing in eV</td>
+          <td style="text-align: center">SIGMA</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">nspin</td>
+          <td style="text-align: center">1 (ISPIN=1)/2 (ISPIN=2)/4 （2 是共线自旋计算，4 是非共线自旋计算)</td>
+          <td style="text-align: center">考不考虑自旋</td>
+          <td style="text-align: center">ISPIN</td>
+      </tr>
+  </tbody>
+</table></div>
+<blockquote>
+<p><strong>Tip 1</strong>：关于 <code>calculation</code> 参数的取值
+1、静态计算：scf
+2、结构优化：relax 或者 cell-relax
+3、非自洽计算：nscf
+4、分子动力学模拟：md</p>
+<p><strong>具体计算细节见后续小节</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Tip 2</strong>：电荷密度和波函数相关设置
+1、init_chg 有 <code>atomic</code> 和 <code>file</code> 两种取值，前者是根据原子密度求和得到初始电荷密度，后者是直接从电荷密度文件读取。
+2、电荷密度文件可以通过设置参数 <code>out_chg</code> 为 Ture 来输出，输出文件名后缀为 <code>.cube</code>。
+3、init_wfc 的取值为 <code>atomic</code> <code>random</code> <code>atomic+random</code> <code>file</code> 四种。PW 基组建议使用 <code>atomic</code> ，LCAO 基组建议使用 <code>file</code>。
+4、波函数的输出有两种，<code>out_wfc_pw</code> 和 <code>out_wfc_lcao</code>, 应该是基组不一样。当它们取 0 时，不输出，取 1 时输出的波函数文件是 txt 格式，取 2 时是二进制文件。</p>
+</blockquote>
+<h2 id="stru-结构文件"><code>STRU</code> 结构文件
+</h2><p>![[Pasted image 20240118173533.png]]</p>
+<blockquote>
+<p><strong>原子坐标的进阶写法</strong>
+1、在做结构优化的时候，如果要固定某些原子不动，某些原子动，则在原子坐标后面加上 <code>m 0 0 0</code> 或 <code>m 1 1 1</code>,0 代表不动，1 代表允许移动。例如上面硅的例子, 原子坐标改为：
+-0.125  -0.125  -0.125    m 0 0 0
+0.125   0.125   0.125    m 1 1 1
+表示第一个原子不动，第二个原子可移动。M 可以省略。</p>
+</blockquote>
+<p>2、如果要设置每个原子磁矩不同，或者非共线磁时，在每个原子坐标后面加关键词 <code>mag</code> 来编写原子磁矩，共线磁只需一个数，非共线磁要三个数，与 <code>vasp</code> 中的 <code>MAGMOM</code> 参数一致。</p>
+<blockquote>
+</blockquote>
+<p>3、如果要设置共线反铁磁，则设置两种原子，其他参数都一样，但一种磁矩为 m，另一种为-m。</p>
+<h3 id="stru-格式转换-方案-0"><code>STRU</code> 格式转换-方案 0
+</h3><p>最方便的方案，下载 <code>atomkit</code>，使用方式和 <code>vaspkit</code> 一样。</p>
+<h3 id="stru-格式转换-方案-1"><code>STRU</code> 格式转换-方案 1
+</h3><blockquote>
+<p><a class="link" href="https://github.com/deepmodeling/dpdata"  target="_blank" rel="noopener"
+    >deepmodeling/dpdata-github</a></p>
+</blockquote>
+<p>安装略（需要安装 <code>conda+Python</code>），在组内集群可以直接运行 <code>pip install dpdata</code></p>
+<p>使用</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">conda activate dpdata <span class="c1"># or any env contain python&gt;=3</span>
+</span></span><span class="line"><span class="cl">python
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>进入 <code>python</code> 后</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">dpdata</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#poscar 转为 stru</span>
+</span></span><span class="line"><span class="cl"><span class="n">ls</span> <span class="o">=</span> <span class="n">dpdata</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s1">&#39;POSCAR&#39;</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;poscar&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ls</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s2">&#34;STRU&#34;</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;abacus/stru&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#stru 转为 poscar</span>
+</span></span><span class="line"><span class="cl"><span class="n">ls</span> <span class="o">=</span> <span class="n">dpdata</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s2">&#34;STRU&#34;</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;abacus/stru&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ls</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s1">&#39;POSCAR&#39;</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;poscar&#39;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="stru-格式转换-方案-2"><code>STRU</code> 格式转换-方案 2
+</h3><blockquote>
+<p><a class="link" href="https://nb.bohrium.dp.tech/detail/9814968648"  target="_blank" rel="noopener"
+    >ABACUS 使用教程｜如何转换 STRU 文件</a></p>
+</blockquote>
+<p>这里使用的是 <code>Python ASE-ABACUS</code> 接口，和上面的方案一样，都需要 <code>Python</code> 环境。</p>
+<p>上面的软件应该有前缀 <code>dp</code>，应该也是一个社区开发的。</p>
+<blockquote>
+<p>[!info] <a class="link" href="https://gitlab.com/1041176461/ase-abacus"  target="_blank" rel="noopener"
+    >jiyuyang / ase-abacus · GitLab</a>
+<a class="link" href="https://wiki.fysik.dtu.dk/ase/"  target="_blank" rel="noopener"
+    >ASE</a> (Atomic Simulation Environment) provides a set of Python tools for setting, running, and analysing atomic simulations. We have developed an <a class="link" href="http://abacus.ustc.edu.cn/"  target="_blank" rel="noopener"
+    >ABACUS</a> calculator (ase-abacus) to be used together with the ASE tools, which exists as an external project with respect to ASE and is maintained by ABACUS developers.</p>
+</blockquote>
+<p>所以这个软件相当于一个工具合集，或许正式教程中直接安装这个会更好。</p>
+<p>如果组里要装，最好的方式就是看看怎么启用 <code>conda</code>，大家要用就默认启用这个模组，或者在 <code>module</code> 里面 <code>activate conda env-abacus</code>，如果各自有需要就 clone 一个 environment.</p>
+<p><strong>现阶段对我来说最有用的还是它有 MD Analysis</strong></p>
+<h2 id="kpt-计算网格"><code>KPT</code> 计算网格
+</h2><p>这里利用 <code>atomkit</code> 生成 <code>KPT</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="n">echo</span><span class="w"> </span><span class="o">-</span><span class="n">e</span><span class="w"> </span><span class="s2">&#34;301\n0\n101 STRU\n0.03&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">atomkit</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1"># or you can just type `atomkit` and follow the guide
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="结构优化">结构优化
+</h1><p><code>ABACUS</code> 提供了两种结构优化的方法 <code>relax</code> 和 <code>cell-relax</code>。前者其实对应于 <code>VASP</code> 里面的 <code>ISIF=2</code>，就是优化原子位置，但不优化晶格矢量（晶胞）；后者则对应 <code>ISIF=3</code>，既优化晶胞，又优化原子位置。当然也可以固定原子位置进行优化，具体见 [[ABACUS-handbook#<code>STRU</code> 结构文件]] 章节。</p>
+<p>下面表格是结构优化可能用到的参数。</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">参数名</th>
+          <th style="text-align: center">取值（默认值）</th>
+          <th style="text-align: center">注释</th>
+          <th style="text-align: center">VASP</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">calculation</td>
+          <td style="text-align: center">relax</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">ISIF=2</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">calculation</td>
+          <td style="text-align: center">cell-relax</td>
+          <td style="text-align: center">-</td>
+          <td style="text-align: center">ISIF=3</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">relax_method</td>
+          <td style="text-align: center">cg/bfgs/cg_bfgs/sd/fire（cg）</td>
+          <td style="text-align: center">Tip 1</td>
+          <td style="text-align: center">IBRION</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">relax_nmax</td>
+          <td style="text-align: center">实数 (1)</td>
+          <td style="text-align: center">最大离子步</td>
+          <td style="text-align: center">NSW</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">force_thr_ev</td>
+          <td style="text-align: center">实数（0.0257112）</td>
+          <td style="text-align: center">力收敛的条件</td>
+          <td style="text-align: center">EDIFFG</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">cal_stress</td>
+          <td style="text-align: center">T/F (True if calculation is cell-relax, False otherwise)</td>
+          <td style="text-align: center">是否计算应力</td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">stress_thr</td>
+          <td style="text-align: center">实数（0.5）</td>
+          <td style="text-align: center">应力收敛的阈值</td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">fixed_axes</td>
+          <td style="text-align: center">None/volume/shape/a/b/c/ab/ac/bc</td>
+          <td style="text-align: center">固定原胞参数</td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">out_stru</td>
+          <td style="text-align: center">T/F (F))</td>
+          <td style="text-align: center">是否输出结构文件</td>
+          <td style="text-align: center"></td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="opt_input"><code>opt_INPUT</code>
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">INPUT_PARAMETERS
+</span></span><span class="line"><span class="cl">#Parameters (1.General)
+</span></span><span class="line"><span class="cl">pseudo_dir          /share/home/wangml/SG15_ONCV_v1.0_upf
+</span></span><span class="line"><span class="cl">orbital_dir         /share/home/wangml/SG15-Version1p0__StandardOrbitals-Version2p0
+</span></span><span class="line"><span class="cl">ntype               5
+</span></span><span class="line"><span class="cl">calculation         cell-relax
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#Parameters (2.SCF)
+</span></span><span class="line"><span class="cl">ecutwfc             100
+</span></span><span class="line"><span class="cl">scf_thr             1e-5
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">smearing_method		gauss
+</span></span><span class="line"><span class="cl">smearing_sigma			0.01
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#Parameters (3.Basis)
+</span></span><span class="line"><span class="cl">basis_type          lcao
+</span></span><span class="line"><span class="cl">force_thr_ev		0.01		# the threshold of the force convergence, in unit of eV/Angstrom
+</span></span><span class="line"><span class="cl">stress_thr		2		# the threshold of the stress convergence, in unit of kBar
+</span></span><span class="line"><span class="cl">relax_nmax		100		# the maximal number of ionic iteration steps
+</span></span><span class="line"><span class="cl">out_stru		1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">##Parameter DFT+U
+</span></span><span class="line"><span class="cl">dft_plus_u    1
+</span></span><span class="line"><span class="cl">orbital_corr    2 -1 -1 -1 -1
+</span></span><span class="line"><span class="cl">hubbard_u    4 0 0 0 0
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="自洽计算-scf">自洽计算 SCF
+</h1><h2 id="scf_input"><code>scf_INPUT</code>
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">INPUT_PARAMETERS
+</span></span><span class="line"><span class="cl">#Parameters (1.General)
+</span></span><span class="line"><span class="cl">pseudo_dir          /share/home/wangml/SG15_ONCV_v1.0_upf
+</span></span><span class="line"><span class="cl">orbital_dir         /share/home/wangml/SG15-Version1p0__StandardOrbitals-Version2p0
+</span></span><span class="line"><span class="cl">ntype               5
+</span></span><span class="line"><span class="cl">calculation         scf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#Parameters (2.SCF)
+</span></span><span class="line"><span class="cl">ecutwfc             100
+</span></span><span class="line"><span class="cl">scf_thr             1e-7
+</span></span><span class="line"><span class="cl">scf_nmax	        100
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#Parameters (3.Basis)
+</span></span><span class="line"><span class="cl">basis_type          lcao
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">smearing_method     gauss
+</span></span><span class="line"><span class="cl">smearing_sigma      0.015
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">##Parameter DFT+U
+</span></span><span class="line"><span class="cl">dft_plus_u    1
+</span></span><span class="line"><span class="cl">orbital_corr    2 -1 -1 -1 -1
+</span></span><span class="line"><span class="cl">hubbard_u    4 0 0 0 0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#Parameters (File)
+</span></span><span class="line"><span class="cl">out_chg                         1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="scf-续算">SCF-续算
+</h3><p><code>init_chg</code> is used for choosing the method of charge density initialization.</p>
+<ul>
+<li><code>atomic</code> : initial charge density by atomic charge density from pseudopotential file under keyword <code>PP_RHOATOM</code></li>
+<li><code>file</code> : initial charge density from files produced by previous calculations with <a class="link" href="https://abacus.deepmodeling.com/en/latest/advanced/elec_properties/charge.html"  target="_blank" rel="noopener"
+    ><code>out_chg 1</code></a>.</li>
+</ul>
+<h2 id="scf-输出">SCF-输出
+</h2><p>![[Pasted image 20240118215036.png]]</p>
+<h1 id="dftu">DFT+U
+</h1><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">参数名</th>
+          <th style="text-align: left">取值</th>
+          <th style="text-align: left">含义</th>
+          <th style="text-align: left">vasp 对应</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">dft_plus_u</td>
+          <td style="text-align: left">T/F</td>
+          <td style="text-align: left">加不加 UU</td>
+          <td style="text-align: left">LDAU</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">orbital_corr</td>
+          <td style="text-align: left">-1,1,2,3</td>
+          <td style="text-align: left">-1 代表该原子不加，1/2/3 代表 p/d/f 轨道加 U</td>
+          <td style="text-align: left">LDAUL</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">hubbard_u</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">加 U 的大小 U</td>
+          <td style="text-align: left">LDAUU minus LDAUJ</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">yukawa_potential</td>
+          <td style="text-align: left">T/F</td>
+          <td style="text-align: left">采用局域屏蔽库伦势计算 U 值 U</td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
+</table></div>
+<h1 id="其他">其他
+</h1><p>想找其他类型计算的参数设置，或者这个社区其他软件包的使用教程，都可以去 <a class="link" href="https://nb.bohrium.dp.tech/cases"  target="_blank" rel="noopener"
+    >bohrium社区</a>中寻找 Notebook。</p>
+<h2 id="输出文件">输出文件
+</h2><p>所有的输出文件都在 <code>OUT.suffix</code> 文件夹中。</p>
+<ul>
+<li><code>INPUT</code> 计算中所有使用的参数</li>
+<li><code>STRU_ION_D</code> 结构优化结果文件</li>
+<li><code>SPIN1_CHG.cube</code> 电荷密度文件</li>
+<li><code>running_scf.log</code> 计算细节，等同于 <code>OUTCAR</code></li>
+</ul>
+<h2 id="数据和图像处理">数据和图像处理
+</h2><p>这个社区有提供相应的 <code>python</code> 代码画图，可以在集群上直接安装 <code>jupyter-notebook</code> ，在服务器上进行简单的绘图，分析计算结果。</p>
+<h1 id="一些注意事项">一些注意事项
+</h1><blockquote>
+<p><a class="link" href="https://xmywuqhxb0.feishu.cn/docx/KN3KdqbX6o9S6xxtbtCcD5YPnue"  target="_blank" rel="noopener"
+    >新人使用注意事项</a></p>
+</blockquote>
+<ol>
+<li>用 LCAO 计算有真空层的体系时，<strong>不要把真空层设置在 Z 方向</strong>，目前 ABACUS 的格点积分（与原子位置有关）是在 Z 方向进行并行的，这样会造成资源浪费。PW 计算没有这种考虑。</li>
+<li>  ABACUS 的输入参数中，长度单位通常为 Bohr，能量单位通常为 Ry。 
+<ol>
+<li>1 Angstrom ~= 1.889716 Bohr</li>
+<li>1 Ry ~= 13.6 eV</li>
+</ol>
+</li>
+<li><strong>ecutwfc</strong>：对应 VASP 的<strong>ENCUT</strong>，单位为 Ry。VASP 常用 PAW 赝势，ABACUS 常用模守恒赝势。使用 ABACUS 时不能直接用 VASP 的能量截断值，需重新做收敛性测试，一般模守恒赝势需要的截断值更大。</li>
+</ol>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/dft/">DFT</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2023 - 
+        
+        2024 Kanrw
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

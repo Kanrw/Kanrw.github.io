@@ -2,59 +2,684 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on Kanrw</title>
-        <link>https://kanrw.github.io/post/</link>
+        <link>http://localhost:1313/post/</link>
         <description>Recent content in Posts on Kanrw</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 31 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kanrw.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 03 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ABACUS简明手册</title>
+        <link>http://localhost:1313/p/abacus%E7%AE%80%E6%98%8E%E6%89%8B%E5%86%8C/</link>
+        <pubDate>Sat, 03 Feb 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/abacus%E7%AE%80%E6%98%8E%E6%89%8B%E5%86%8C/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://abacus.ustc.edu.cn/main.htm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Abacus&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://abacus.ustc.edu.cn/manual/list.htm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;相关软件的手册&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://xmywuqhxb0.feishu.cn/docx/KN3KdqbX6o9S6xxtbtCcD5YPnue&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;新人使用注意事项&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction
+&lt;/h1&gt;&lt;p&gt;&lt;code&gt;ABACUS&lt;/code&gt; 是一个可以选择平面波 pw 基组或者 LCAO 原子轨道基组进行 DFT 计算的软件包。&lt;/p&gt;
+&lt;p&gt;LCAO 基组的好处是相对平面波基组更小，因此计算的效率更高，虽然精度相对会低一点，相当于在计算速度和精度之间重新寻找了一个平衡点。&lt;/p&gt;
+&lt;p&gt;除此之外，由于使用原子轨道基，在一些特定的情况下，例如计算 BPVE 体光伏效应的时候，不用再使用 &lt;code&gt;wannier90&lt;/code&gt; 拟合哈密顿量，减少了误差出现的可能性，优化工作流。&lt;/p&gt;
+&lt;p&gt;并且在这个生态下还有其他的软件可以方便的使用，例如 &lt;code&gt;DeePMD&lt;/code&gt;、&lt;code&gt;PYATB&lt;/code&gt; 等等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://bohrium-chat.dp.tech/#/chat&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Bohrium Chat&lt;/a&gt; 有什么问题可以问他们社区的 GPT&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;下面是官方介绍&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ABACUS (Atomic-orbital Based Ab-initio Computation at UStc) is an open-source computer code package aiming for large-scale electronic-structure simulations from first principles, developed at the Key Laboratory of Quantum Information and Supercomputing Center, University of Science and Technology of China (USTC) - Computer Network and Information Center, Chinese of Academy (CNIC of CAS).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ABACUS currently provides the following features and functionalities:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Three types of supported basis sets: pw, LCAO, and LCAO-in-pw.&lt;/li&gt;
+&lt;li&gt;Ground-state total energy calculations using Kohn-Sham (KS) density functional theory (DFT) with local-density, generalized gradient approximations (LDA/GGAs), Meta-GGA (requires LIBXC, only for PW), and hybrid functionals (PBE0 and HSE06, only for LCAO and currently under test).&lt;/li&gt;
+&lt;li&gt;Geometry relaxations with Conjugated Gradient (CG), BFGS, and FIRE methods.&lt;/li&gt;
+&lt;li&gt;Semi-empirical van der Waals energy correction using the Grimme DFT-D2/D3 scheme.&lt;/li&gt;
+&lt;li&gt;NVT and NVE molecular dynamics simulation. AIMD, DP potential, LJ potential are supported.&lt;/li&gt;
+&lt;li&gt;Stress calculation and cell relaxation.&lt;/li&gt;
+&lt;li&gt;Electric polarization calculation using Berry Phase theory.&lt;/li&gt;
+&lt;li&gt;Interface to the Wannier90 package.&lt;/li&gt;
+&lt;li&gt;Real-time time dependent density functional theory (TDDFT).&lt;/li&gt;
+&lt;li&gt;Print-out of the electrostatic potential.&lt;/li&gt;
+&lt;li&gt;Mulliken charge analysis (only for LCAO).&lt;/li&gt;
+&lt;li&gt;Projected density of states (PDOS) (only for LCAO).&lt;/li&gt;
+&lt;li&gt;DFT+U calculation (only for LCAO).&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;how-to-submit&#34;&gt;How to submit
+&lt;/h1&gt;&lt;p&gt;Here is a simple script to submit the job.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-job.sh&#34; data-lang=&#34;job.sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#SBATCH -J TASK&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#SBATCH -p sonmi_1 -N 1 -n 40&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;ulimit&lt;/span&gt; -s unlimited
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;module load abacus
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;This program is running at&amp;#39;&lt;/span&gt;  &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;hostname&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mpirun -n &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;SLURM_NPROCS&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; abacus
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;由于这个软件使用的是 &lt;code&gt;intel-2023&lt;/code&gt; 编译器，因此在有些节点上可能无法使用。&lt;/p&gt;
+&lt;h1 id=&#34;辅助软件-用于准备相应输入文件&#34;&gt;辅助软件-用于准备相应输入文件
+&lt;/h1&gt;&lt;h2 id=&#34;atomkit&#34;&gt;&lt;code&gt;atomkit&lt;/code&gt;
+&lt;/h2&gt;&lt;p&gt;和 &lt;code&gt;vaspkit&lt;/code&gt; 是同一个开发组，使用方式也一样，以前用 &lt;code&gt;vaspkit&lt;/code&gt; 的同学可以无缝衔接。但是 &lt;code&gt;atomkit&lt;/code&gt; 还在测试中，需要加 qq 群获取安装包，有需要的可以联系管理员。
+（或者我有空装到 &lt;code&gt;module&lt;/code&gt; 中）&lt;/p&gt;
+&lt;h2 id=&#34;dpdata&#34;&gt;&lt;code&gt;dpdata&lt;/code&gt;
+&lt;/h2&gt;&lt;p&gt;![[dpdata-handbook#Introduction]]&lt;/p&gt;
+&lt;h1 id=&#34;赝势和轨道文件-pseudo_dir-and-orbital_dir&#34;&gt;赝势和轨道文件 &lt;code&gt;pseudo_dir&lt;/code&gt; and &lt;code&gt;orbital_dir&lt;/code&gt;
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://xmywuqhxb0.feishu.cn/docx/M6M2dJj4moBL05xaMtLc8sf1nub&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;轨道文件的基本说明&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;在 INPUT 文件中用 &lt;code&gt;basis_type&lt;/code&gt; 来确定是平面波基组（pw）还是原子轨道的线性组合（lcao），&lt;strong&gt;默认是前者&lt;/strong&gt;，使用后者要在 STRU 文件中写入原子轨道基组的信息&lt;/li&gt;
+&lt;li&gt;ABACUS 没有 POTCAR 文件，而是将 POTCAR 文件变成地址调用，在 INPUT 中写好地址，STRU 文件中选择调用的具体文件名，轨道信息也是如此&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;计算需要赝势库 &lt;a class=&#34;link&#34; href=&#34;https://abacus.ustc.edu.cn/pseudo/list.htm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PSEUDOPOTENTIALS AND ORBITALS&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/Pasted%20image%2020240109171014.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pseudo_dir          /share/home/wangml/SG15_ONCV_v1.0_upf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;orbital_dir         /share/home/wangml/SG15-Version1p0__StandardOrbitals-Version2p0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol&gt;
+&lt;li&gt;训练 DP 势需要先进行收敛性测试，需要下载的是包含所有轨道基组的包，而不是只包含推荐设置的 standard 的包。（&lt;em&gt;但是 &lt;code&gt;atomkit&lt;/code&gt; 自动转换的 &lt;code&gt;STRU&lt;/code&gt; 只能指定 standard 版本的轨道文件，如欲测试其他轨道文件，需手动修改&lt;/em&gt;）&lt;/li&gt;
+&lt;li&gt;下载完成后通过轨道文件的名字判断该轨道的精度等级（以 Si 为例）：![[Pasted image 20240126131643.png]]&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DZP 精度&amp;lt;TZDP， DZP 效率优于 TZDP&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;“Si_gga_6au_100Ry_2s2p1d. Orb”
+1. &lt;code&gt;Si&lt;/code&gt; : 元素名，需要确认和赝势中元素相同
+2. &lt;code&gt;gga&lt;/code&gt;：对应的赝势中的交换关联泛函版本，目前只提供了 GGA-PBE 的
+3. &lt;code&gt;6au&lt;/code&gt;：轨道截断半径，越小越快，越大越准，需要收敛性测试
+4. &lt;code&gt;100Ry&lt;/code&gt;：说明精度锚定的是 &lt;code&gt;ecutwfc = 100Ry&lt;/code&gt; 的 PW 基组计算结果，作为参数设置推荐值，ecutwfc 不需要进行收敛性测试
+5. &lt;code&gt;2s2p1d&lt;/code&gt;：轨道文件中包含的轨道数量，越多越准，越少越快，不需要收敛性测试，只需要判断 scf 收敛的电子结构性质结果精度是否符合需求，一般来说 DZP 是够用的，不排除特例。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;和 PW 基组一样，对 k 点的收敛性测试也是需要的。&lt;/p&gt;
+&lt;h1 id=&#34;input-files&#34;&gt;Input Files
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://abacus.deepmodeling.com/en/latest/quick_start/input.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Brief Introduction of the Input Files — ABACUS documentation&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1Bc41147vg/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=a927cbf9ea7106abc8e72b377926f35e&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;周巍青：密度泛函理论与ABACUS简介_哔哩哔哩_bilibili&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;input-基本参数&#34;&gt;&lt;code&gt;INPUT&lt;/code&gt; 基本参数
+&lt;/h2&gt;&lt;p&gt;需要注意，&lt;strong&gt;这个软件的单位和 &lt;code&gt;vasp&lt;/code&gt; 不一样，例如 &lt;code&gt;ecutwfc&lt;/code&gt;&lt;/strong&gt;。因此在&lt;strong&gt;进行参数转换的时候一定一定要慎重&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;简单的 &lt;code&gt;INPUT&lt;/code&gt; 文件如下所示&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INPUT_PARAMETERS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;suffix                  MgO # the name of system
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ntype                   2 # how many types of elements in the unit cell
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pseudo_dir              ./
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;orbital_dir		./
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ecutwfc                 100             # Rydberg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scf_thr                 1e-4		# Rydberg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;basis_type              lcao            
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;calculation             scf		# this is the key parameter telling abacus to do a scf calculation
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;out_chg			True
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;&lt;code&gt;INPUT&lt;/code&gt; 文件需要以 &lt;code&gt;INPUT_PARAMETERS&lt;/code&gt; 先行词开头，该词前面的内容都会被忽略掉。输入参数有很多, 具体请查看手册，这里列举几种情况的输入文件怎么写。
+下面整理一些常用的参数&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;参数名&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;取值 (VASP 中对应的取值))&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;注释&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;VASP&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;scf_thr&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;实数&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;电荷密度收敛条件，计算两次电子步的电荷密度差值，来确定是否退出电子迭代，与 vasp 中的 EDIFF 起到的作用一样&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;EDIFF&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;suffix&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;系统名称&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;SYSTEM&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ntype&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;实数&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;原子种类数，可以不设置，ABACUS 会根据 STRU 文件来自动确定原子种类会&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;pseudo_dir&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;赝势文件地址&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;orbital_dir&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;轨道文件地址（pw 基组可以不写）&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ecutwfc&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;如果选的是 lcao 基组，那么最好和轨道文件选取一致（看文件名）&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;平面波的截断能，这里的单位是 Ry&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ENCUT&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;basis_type&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;lcao/pw&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;基组的选取&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;calculation&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Tip 1&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;计算的类型&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;init_chg&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Tip 2&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;初始电荷密度的设置&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ICHARG&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;init_wfc&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Tip 2&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;初始波函数的设置，只有选了 pw 基组才需要设置 w&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ISTART&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;out_chg&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;T/F&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;是否输出电荷密度文件&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;LCHARG&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;out_wfc_pw&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;0/1/2&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;是否输出波函数&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;LWAVE&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;scf_nmax&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;电子步的最大值&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;NELM&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;smearing_method&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;fixed（ISMEAR=-2）/gauss （ISMEAR=0）/mp （ISMEAR&amp;gt;0）/fd（ISMEAR=-1）)&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;轨道占据的方式&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ISMEAR&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;smearing_sigma&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;the width of the smearing in eV&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;SIGMA&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;nspin&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;1 (ISPIN=1)/2 (ISPIN=2)/4 （2 是共线自旋计算，4 是非共线自旋计算)&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;考不考虑自旋&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ISPIN&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Tip 1&lt;/strong&gt;：关于 &lt;code&gt;calculation&lt;/code&gt; 参数的取值
+1、静态计算：scf
+2、结构优化：relax 或者 cell-relax
+3、非自洽计算：nscf
+4、分子动力学模拟：md&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;具体计算细节见后续小节&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Tip 2&lt;/strong&gt;：电荷密度和波函数相关设置
+1、init_chg 有 &lt;code&gt;atomic&lt;/code&gt; 和 &lt;code&gt;file&lt;/code&gt; 两种取值，前者是根据原子密度求和得到初始电荷密度，后者是直接从电荷密度文件读取。
+2、电荷密度文件可以通过设置参数 &lt;code&gt;out_chg&lt;/code&gt; 为 Ture 来输出，输出文件名后缀为 &lt;code&gt;.cube&lt;/code&gt;。
+3、init_wfc 的取值为 &lt;code&gt;atomic&lt;/code&gt; &lt;code&gt;random&lt;/code&gt; &lt;code&gt;atomic+random&lt;/code&gt; &lt;code&gt;file&lt;/code&gt; 四种。PW 基组建议使用 &lt;code&gt;atomic&lt;/code&gt; ，LCAO 基组建议使用 &lt;code&gt;file&lt;/code&gt;。
+4、波函数的输出有两种，&lt;code&gt;out_wfc_pw&lt;/code&gt; 和 &lt;code&gt;out_wfc_lcao&lt;/code&gt;, 应该是基组不一样。当它们取 0 时，不输出，取 1 时输出的波函数文件是 txt 格式，取 2 时是二进制文件。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;stru-结构文件&#34;&gt;&lt;code&gt;STRU&lt;/code&gt; 结构文件
+&lt;/h2&gt;&lt;p&gt;![[Pasted image 20240118173533.png]]&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;原子坐标的进阶写法&lt;/strong&gt;
+1、在做结构优化的时候，如果要固定某些原子不动，某些原子动，则在原子坐标后面加上 &lt;code&gt;m 0 0 0&lt;/code&gt; 或 &lt;code&gt;m 1 1 1&lt;/code&gt;,0 代表不动，1 代表允许移动。例如上面硅的例子, 原子坐标改为：
+-0.125  -0.125  -0.125    m 0 0 0
+0.125   0.125   0.125    m 1 1 1
+表示第一个原子不动，第二个原子可移动。M 可以省略。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2、如果要设置每个原子磁矩不同，或者非共线磁时，在每个原子坐标后面加关键词 &lt;code&gt;mag&lt;/code&gt; 来编写原子磁矩，共线磁只需一个数，非共线磁要三个数，与 &lt;code&gt;vasp&lt;/code&gt; 中的 &lt;code&gt;MAGMOM&lt;/code&gt; 参数一致。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;3、如果要设置共线反铁磁，则设置两种原子，其他参数都一样，但一种磁矩为 m，另一种为-m。&lt;/p&gt;
+&lt;h3 id=&#34;stru-格式转换-方案-0&#34;&gt;&lt;code&gt;STRU&lt;/code&gt; 格式转换-方案 0
+&lt;/h3&gt;&lt;p&gt;最方便的方案，下载 &lt;code&gt;atomkit&lt;/code&gt;，使用方式和 &lt;code&gt;vaspkit&lt;/code&gt; 一样。&lt;/p&gt;
+&lt;h3 id=&#34;stru-格式转换-方案-1&#34;&gt;&lt;code&gt;STRU&lt;/code&gt; 格式转换-方案 1
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/deepmodeling/dpdata&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;deepmodeling/dpdata-github&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;安装略（需要安装 &lt;code&gt;conda+Python&lt;/code&gt;），在组内集群可以直接运行 &lt;code&gt;pip install dpdata&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;使用&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda activate dpdata &lt;span class=&#34;c1&#34;&gt;# or any env contain python&amp;gt;=3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;进入 &lt;code&gt;python&lt;/code&gt; 后&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;dpdata&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#poscar 转为 stru&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ls&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dpdata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file_name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;POSCAR&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;poscar&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file_name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;STRU&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;abacus/stru&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#stru 转为 poscar&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ls&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dpdata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file_name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;STRU&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;abacus/stru&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file_name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;POSCAR&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;poscar&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;stru-格式转换-方案-2&#34;&gt;&lt;code&gt;STRU&lt;/code&gt; 格式转换-方案 2
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://nb.bohrium.dp.tech/detail/9814968648&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ABACUS 使用教程｜如何转换 STRU 文件&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这里使用的是 &lt;code&gt;Python ASE-ABACUS&lt;/code&gt; 接口，和上面的方案一样，都需要 &lt;code&gt;Python&lt;/code&gt; 环境。&lt;/p&gt;
+&lt;p&gt;上面的软件应该有前缀 &lt;code&gt;dp&lt;/code&gt;，应该也是一个社区开发的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!info] &lt;a class=&#34;link&#34; href=&#34;https://gitlab.com/1041176461/ase-abacus&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;jiyuyang / ase-abacus · GitLab&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://wiki.fysik.dtu.dk/ase/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ASE&lt;/a&gt; (Atomic Simulation Environment) provides a set of Python tools for setting, running, and analysing atomic simulations. We have developed an &lt;a class=&#34;link&#34; href=&#34;http://abacus.ustc.edu.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ABACUS&lt;/a&gt; calculator (ase-abacus) to be used together with the ASE tools, which exists as an external project with respect to ASE and is maintained by ABACUS developers.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;所以这个软件相当于一个工具合集，或许正式教程中直接安装这个会更好。&lt;/p&gt;
+&lt;p&gt;如果组里要装，最好的方式就是看看怎么启用 &lt;code&gt;conda&lt;/code&gt;，大家要用就默认启用这个模组，或者在 &lt;code&gt;module&lt;/code&gt; 里面 &lt;code&gt;activate conda env-abacus&lt;/code&gt;，如果各自有需要就 clone 一个 environment.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;现阶段对我来说最有用的还是它有 MD Analysis&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;kpt-计算网格&#34;&gt;&lt;code&gt;KPT&lt;/code&gt; 计算网格
+&lt;/h2&gt;&lt;p&gt;这里利用 &lt;code&gt;atomkit&lt;/code&gt; 生成 &lt;code&gt;KPT&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;301\n0\n101 STRU\n0.03&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;atomkit&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# or you can just type `atomkit` and follow the guide
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id=&#34;结构优化&#34;&gt;结构优化
+&lt;/h1&gt;&lt;p&gt;&lt;code&gt;ABACUS&lt;/code&gt; 提供了两种结构优化的方法 &lt;code&gt;relax&lt;/code&gt; 和 &lt;code&gt;cell-relax&lt;/code&gt;。前者其实对应于 &lt;code&gt;VASP&lt;/code&gt; 里面的 &lt;code&gt;ISIF=2&lt;/code&gt;，就是优化原子位置，但不优化晶格矢量（晶胞）；后者则对应 &lt;code&gt;ISIF=3&lt;/code&gt;，既优化晶胞，又优化原子位置。当然也可以固定原子位置进行优化，具体见 [[ABACUS-handbook#&lt;code&gt;STRU&lt;/code&gt; 结构文件]] 章节。&lt;/p&gt;
+&lt;p&gt;下面表格是结构优化可能用到的参数。&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;参数名&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;取值（默认值）&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;注释&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;VASP&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;calculation&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;relax&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ISIF=2&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;calculation&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;cell-relax&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ISIF=3&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;relax_method&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;cg/bfgs/cg_bfgs/sd/fire（cg）&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Tip 1&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;IBRION&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;relax_nmax&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;实数 (1)&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;最大离子步&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;NSW&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;force_thr_ev&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;实数（0.0257112）&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;力收敛的条件&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;EDIFFG&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;cal_stress&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;T/F (True if calculation is cell-relax, False otherwise)&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;是否计算应力&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;stress_thr&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;实数（0.5）&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;应力收敛的阈值&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;fixed_axes&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;None/volume/shape/a/b/c/ab/ac/bc&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;固定原胞参数&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;out_stru&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;T/F (F))&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;是否输出结构文件&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;opt_input&#34;&gt;&lt;code&gt;opt_INPUT&lt;/code&gt;
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INPUT_PARAMETERS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#Parameters (1.General)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pseudo_dir          /share/home/wangml/SG15_ONCV_v1.0_upf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;orbital_dir         /share/home/wangml/SG15-Version1p0__StandardOrbitals-Version2p0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ntype               5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;calculation         cell-relax
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#Parameters (2.SCF)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ecutwfc             100
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scf_thr             1e-5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;smearing_method		gauss
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;smearing_sigma			0.01
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#Parameters (3.Basis)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;basis_type          lcao
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;force_thr_ev		0.01		# the threshold of the force convergence, in unit of eV/Angstrom
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;stress_thr		2		# the threshold of the stress convergence, in unit of kBar
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;relax_nmax		100		# the maximal number of ionic iteration steps
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;out_stru		1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##Parameter DFT+U
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dft_plus_u    1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;orbital_corr    2 -1 -1 -1 -1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hubbard_u    4 0 0 0 0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id=&#34;自洽计算-scf&#34;&gt;自洽计算 SCF
+&lt;/h1&gt;&lt;h2 id=&#34;scf_input&#34;&gt;&lt;code&gt;scf_INPUT&lt;/code&gt;
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INPUT_PARAMETERS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#Parameters (1.General)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pseudo_dir          /share/home/wangml/SG15_ONCV_v1.0_upf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;orbital_dir         /share/home/wangml/SG15-Version1p0__StandardOrbitals-Version2p0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ntype               5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;calculation         scf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#Parameters (2.SCF)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ecutwfc             100
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scf_thr             1e-7
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scf_nmax	        100
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#Parameters (3.Basis)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;basis_type          lcao
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;smearing_method     gauss
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;smearing_sigma      0.015
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##Parameter DFT+U
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dft_plus_u    1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;orbital_corr    2 -1 -1 -1 -1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hubbard_u    4 0 0 0 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#Parameters (File)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;out_chg                         1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;scf-续算&#34;&gt;SCF-续算
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;init_chg&lt;/code&gt; is used for choosing the method of charge density initialization.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;atomic&lt;/code&gt; : initial charge density by atomic charge density from pseudopotential file under keyword &lt;code&gt;PP_RHOATOM&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;file&lt;/code&gt; : initial charge density from files produced by previous calculations with &lt;a class=&#34;link&#34; href=&#34;https://abacus.deepmodeling.com/en/latest/advanced/elec_properties/charge.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;out_chg 1&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;scf-输出&#34;&gt;SCF-输出
+&lt;/h2&gt;&lt;p&gt;![[Pasted image 20240118215036.png]]&lt;/p&gt;
+&lt;h1 id=&#34;dftu&#34;&gt;DFT+U
+&lt;/h1&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;参数名&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;取值&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;含义&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;vasp 对应&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;dft_plus_u&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;T/F&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;加不加 UU&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;LDAU&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;orbital_corr&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;-1,1,2,3&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;-1 代表该原子不加，1/2/3 代表 p/d/f 轨道加 U&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;LDAUL&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;hubbard_u&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;加 U 的大小 U&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;LDAUU minus LDAUJ&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;yukawa_potential&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;T/F&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;采用局域屏蔽库伦势计算 U 值 U&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;其他&#34;&gt;其他
+&lt;/h1&gt;&lt;p&gt;想找其他类型计算的参数设置，或者这个社区其他软件包的使用教程，都可以去 &lt;a class=&#34;link&#34; href=&#34;https://nb.bohrium.dp.tech/cases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;bohrium社区&lt;/a&gt;中寻找 Notebook。&lt;/p&gt;
+&lt;h2 id=&#34;输出文件&#34;&gt;输出文件
+&lt;/h2&gt;&lt;p&gt;所有的输出文件都在 &lt;code&gt;OUT.suffix&lt;/code&gt; 文件夹中。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;INPUT&lt;/code&gt; 计算中所有使用的参数&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;STRU_ION_D&lt;/code&gt; 结构优化结果文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SPIN1_CHG.cube&lt;/code&gt; 电荷密度文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;running_scf.log&lt;/code&gt; 计算细节，等同于 &lt;code&gt;OUTCAR&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;数据和图像处理&#34;&gt;数据和图像处理
+&lt;/h2&gt;&lt;p&gt;这个社区有提供相应的 &lt;code&gt;python&lt;/code&gt; 代码画图，可以在集群上直接安装 &lt;code&gt;jupyter-notebook&lt;/code&gt; ，在服务器上进行简单的绘图，分析计算结果。&lt;/p&gt;
+&lt;h1 id=&#34;一些注意事项&#34;&gt;一些注意事项
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://xmywuqhxb0.feishu.cn/docx/KN3KdqbX6o9S6xxtbtCcD5YPnue&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;新人使用注意事项&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;用 LCAO 计算有真空层的体系时，&lt;strong&gt;不要把真空层设置在 Z 方向&lt;/strong&gt;，目前 ABACUS 的格点积分（与原子位置有关）是在 Z 方向进行并行的，这样会造成资源浪费。PW 计算没有这种考虑。&lt;/li&gt;
+&lt;li&gt;  ABACUS 的输入参数中，长度单位通常为 Bohr，能量单位通常为 Ry。 
+&lt;ol&gt;
+&lt;li&gt;1 Angstrom ~= 1.889716 Bohr&lt;/li&gt;
+&lt;li&gt;1 Ry ~= 13.6 eV&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ecutwfc&lt;/strong&gt;：对应 VASP 的&lt;strong&gt;ENCUT&lt;/strong&gt;，单位为 Ry。VASP 常用 PAW 赝势，ABACUS 常用模守恒赝势。使用 ABACUS 时不能直接用 VASP 的能量截断值，需重新做收敛性测试，一般模守恒赝势需要的截断值更大。&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
         <title>Crash写作法</title>
-        <link>https://kanrw.github.io/p/crash%E5%86%99%E4%BD%9C%E6%B3%95/</link>
+        <link>http://localhost:1313/p/crash%E5%86%99%E4%BD%9C%E6%B3%95/</link>
         <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://kanrw.github.io/p/crash%E5%86%99%E4%BD%9C%E6%B3%95/</guid>
+        <guid>http://localhost:1313/p/crash%E5%86%99%E4%BD%9C%E6%B3%95/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.sohu.com/a/411100479_752169&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;石黑一雄的崩溃式写作法｜我是如何在四周内完成一部长篇小说的？&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;我们都有完美主义倾向，希望事情按照我们的设想进行。我们希望写作的时候没有别的事情来打扰，写出来的文字优美流畅，不用修改。写作的时候文思泉涌。然而大部分时候我们面临的情况都不可能如此完美，所以大部分时候我们都在拖延，都在面对一团乱码，手足无措。&lt;/p&gt;
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction
+&lt;/h1&gt;&lt;p&gt;我们都有完美主义倾向，希望事情按照我们的设想进行。我们希望写作的时候没有别的事情来打扰，写出来的文字优美流畅，不用修改。写作的时候文思泉涌。然而大部分时候我们面临的情况都不可能如此完美，所以大部分时候我们都在拖延，都在面对一团乱码，手足无措。&lt;/p&gt;
 &lt;p&gt;高中的时候 #Author/石黑一雄 获得了诺奖，由于文化有限，想着追赶一下文学潮流，便买了他的获奖作品 #Author/石黑一雄/被掩埋的巨人 ，后来陆陆续续地看完了他的大部分作品。后来刷到一个他的访谈，聊到他是如何写作的。他说，自己在写 #Author/石黑一雄/长日留痕 的时候，他早早写完了第一章的内容，但是隔了一年，后面的内容迟迟写不出来，于是他决定采取一个“疯狂”的方法。有很多人采取过类似的方案进行写作，只是拥有很多名字，例如 #Author/石黑一雄 叫它‘Crash（崩溃式）写作法’，小红书上有人叫它‘呕吐式写作法’（vomit writing），或者更传统一点，可以叫做‘头脑风暴’或者说是‘思维导图’。&lt;/p&gt;
-&lt;h1 id=&#34;石黑一雄的写作方法&#34;&gt;石黑一雄的写作方法&lt;/h1&gt;
-&lt;blockquote&gt;
+&lt;h1 id=&#34;石黑一雄的写作方法&#34;&gt;石黑一雄的写作方法
+&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;石黑一雄的方法
 在实施“崩溃”计划期间，我肆无忌惮地写作，既不在意文体，也不在意自己下午所写的内容与当日早上所创作的内容相左。我优先考虑的，是让想法跃然纸上，逐渐生发。糟糕的句子，可怕的对话，无用的场景——这些我都一并保留，然后继续笔耕不缀。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;虽然在这个计划期间写出来内容肯定非常粗糙，但是已经完成了写作最重要、最困难的一步，发挥了想象力，完成了框架的建构，剩下的就是缝缝补补。&lt;/p&gt;
 &lt;p&gt;另一种呕吐法也是一样，&lt;strong&gt;在呕吐的时候不会在意形象，尽情的发泄出来，最后整理这一堆垃圾，从中找出有用的部分。&lt;/strong&gt;
 这种方法还有一个好处，就是当我们面对一团乱麻无从下手的时候，在‘呕吐物’中翻找的过程，也是整理思路的过程。从中可以梳理出 #WorkFlow/主线任务 和相应的 #WorkFlow/支线任务 。&lt;/p&gt;
-&lt;h1 id=&#34;具体操作&#34;&gt;具体操作&lt;/h1&gt;
-&lt;p&gt;这些方法其实也有前提，我们要想输出，前提是有输入，这个方法只是让我们克服不敢输出的问题。要想有东西可吐，首先也要肚子里吃了东西。作为科研写作方法，可不能凭空虚构内容出来。&lt;/p&gt;
+&lt;h1 id=&#34;具体操作&#34;&gt;具体操作
+&lt;/h1&gt;&lt;p&gt;这些方法其实也有前提，我们要想输出，前提是有输入，这个方法只是让我们克服不敢输出的问题。要想有东西可吐，首先也要肚子里吃了东西。作为科研写作方法，可不能凭空虚构内容出来。&lt;/p&gt;
 &lt;p&gt;日常写作中也是一样的，包括这个文档，完全可以随意输出，后续再整理。我平常写不出来文章，一是我的思维确实比较的零碎，导致我和别人交流的时候会出现别人搞不懂我的问题的情况；另一个也是我没有整理的习惯，这导致没有什么成体系的输出， #Website 的输出也这样操作。 ^5f9f7e&lt;/p&gt;
-&lt;h2 id=&#34;writing-in-crash&#34;&gt;Writing in Crash&lt;/h2&gt;
-&lt;p&gt;首先选择几篇和我目标成品感觉相近的文章，还有一些我过去看过的作为理论基础的文章，一开始就这么多够了。边读边写，想到什么写什么，不需要顾虑框架，不需要考虑顺序，任由大脑发挥想象力，有要补充的内容就先简单标记，等到下一个阶段再润色补充。&lt;/p&gt;
+&lt;h2 id=&#34;writing-in-crash&#34;&gt;Writing in Crash
+&lt;/h2&gt;&lt;p&gt;首先选择几篇和我目标成品感觉相近的文章，还有一些我过去看过的作为理论基础的文章，一开始就这么多够了。边读边写，想到什么写什么，不需要顾虑框架，不需要考虑顺序，任由大脑发挥想象力，有要补充的内容就先简单标记，等到下一个阶段再润色补充。&lt;/p&gt;
 &lt;p&gt;关键在于，&lt;strong&gt;保证连续性，不要考虑任何打断连续输出的事情&lt;/strong&gt;，包括但不限于复杂的分段，标点，文件命名，就选择&lt;strong&gt;一个文件&lt;/strong&gt;来写。&lt;/p&gt;
 &lt;p&gt;一般 #Literature/PRB 正文 2k 字，换算成中文（毕竟我用中文才能最迅速的输出）大概为三倍，即 6k 字，按照小红书的说法，写到一半的字数就可以开始整理了，与扩展、完善了。&lt;/p&gt;
-&lt;h2 id=&#34;arrange&#34;&gt;Arrange&lt;/h2&gt;
-&lt;p&gt;等到输出完毕，再重新整理所有的内容，将碎片放到合适的地方。整个过程其实类似于卡片式写作法, [[TAGandBOOKMARK-make it grow]],让文章生长出来。&lt;/p&gt;
-&lt;h1 id=&#34;实践之后的感受&#34;&gt;实践之后的感受&lt;/h1&gt;
-&lt;p&gt;平常我就是一个，思维比较跳脱，比较碎片化的人，这些碎片在我脑海中虽然拥有联系，但是别人和我的思维方式、储备都不同，这也是为什么别人很可能听不懂我在说什么。&lt;/p&gt;
+&lt;h2 id=&#34;arrange&#34;&gt;Arrange
+&lt;/h2&gt;&lt;p&gt;等到输出完毕，再重新整理所有的内容，将碎片放到合适的地方。整个过程其实类似于卡片式写作法, [[TAGandBOOKMARK-make it grow]],让文章生长出来。&lt;/p&gt;
+&lt;h1 id=&#34;实践之后的感受&#34;&gt;实践之后的感受
+&lt;/h1&gt;&lt;p&gt;平常我就是一个，思维比较跳脱，比较碎片化的人，这些碎片在我脑海中虽然拥有联系，但是别人和我的思维方式、储备都不同，这也是为什么别人很可能听不懂我在说什么。&lt;/p&gt;
 &lt;p&gt;这在我爸看来就是思维没有深度，他要求与希望所有‘说出口’的内容都是已经经过了细致的思考与组织的。但是每个人思维方式都不同，我也不强求，我不是一个追求伟大事业的人，适合自己就好。&lt;/p&gt;
 &lt;p&gt;这个方案经过我的尝试，就很合适。之前写 [[TAGandBOOKMARK-make it grow]] 就是因为，我有很多冒出来的想法，不知道如何组织，同时它们涌现得太多太快，让我在其中迷失。&lt;/p&gt;
 &lt;p&gt;我以前很喜欢写日记，这个过程就是让我和自己对话，整理自己的思绪。现在科研中也是一样的，让我能够看到未来的方向，想明白真正需要做的是什么事情。[[Crash-231101]]&lt;/p&gt;
 &lt;p&gt;[[网站更新计划]] 我的网站更新其实也可以被吸纳进我的 #WorkFlow/Writing 之中，我的思想，从碎片的 #WorkFlow/Softwares/flomo ,被整理到了 #WorkFlow/Softwares/Obsidian 之中，可能在 ob 之中的内容很多还是像 crash 一样，所以最后进行整理和精炼，来到了我的 #Website 上。这可以是我最近晚上的内容了。&lt;/p&gt;
-&lt;h1 id=&#34;延伸&#34;&gt;延伸&lt;/h1&gt;
-&lt;p&gt;更进一步，为了充分发挥其整理思路的作用，把我混乱的生活整理起来，每天早上到办公室后的第一件事，应该是拿出小本本，把想到的事情都写下来画个图，自然就能知道当天的主线任务和支线任务了。&lt;/p&gt;
+&lt;h1 id=&#34;延伸&#34;&gt;延伸
+&lt;/h1&gt;&lt;p&gt;更进一步，为了充分发挥其整理思路的作用，把我混乱的生活整理起来，每天早上到办公室后的第一件事，应该是拿出小本本，把想到的事情都写下来画个图，自然就能知道当天的主线任务和支线任务了。&lt;/p&gt;
 &lt;p&gt;人生如戏，把科研当作人生的任务，其中也有主线任务和支线任务，尽力而为，做完下班（做不完明天再说）。&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>相机选购指南</title>
-        <link>https://kanrw.github.io/p/%E7%9B%B8%E6%9C%BA%E9%80%89%E8%B4%AD%E6%8C%87%E5%8D%97/</link>
+        <link>http://localhost:1313/p/%E7%9B%B8%E6%9C%BA%E9%80%89%E8%B4%AD%E6%8C%87%E5%8D%97/</link>
         <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://kanrw.github.io/p/%E7%9B%B8%E6%9C%BA%E9%80%89%E8%B4%AD%E6%8C%87%E5%8D%97/</guid>
-        <description>&lt;h1 id=&#34;introduction&#34;&gt;INTRODUCTION&lt;/h1&gt;
-&lt;p&gt;相机属于买了容易吃灰的东西，主要原因是，相比于手机，相机非常的笨重，又需要格外的小心镜头镜片，没法做到随身携带，随拿随拍，本身利用率就很低。除此之外，还需要额外的学习才能够掌握相机的基本使用，直接导出的照片有可能还不如手机好看。而且相机的图片还需要多一步导出、后期，不像手机拍了就能分享。&lt;/p&gt;
+        <guid>http://localhost:1313/p/%E7%9B%B8%E6%9C%BA%E9%80%89%E8%B4%AD%E6%8C%87%E5%8D%97/</guid>
+        <description>&lt;h1 id=&#34;introduction&#34;&gt;INTRODUCTION
+&lt;/h1&gt;&lt;p&gt;相机属于买了容易吃灰的东西，主要原因是，相比于手机，相机非常的笨重，又需要格外的小心镜头镜片，没法做到随身携带，随拿随拍，本身利用率就很低。除此之外，还需要额外的学习才能够掌握相机的基本使用，直接导出的照片有可能还不如手机好看。而且相机的图片还需要多一步导出、后期，不像手机拍了就能分享。&lt;/p&gt;
 &lt;p&gt;日常生活中，手机已经能满足于绝大部分需求。&lt;/p&gt;
 &lt;p&gt;相机相比于手机的优势在于，能够自由掌控拍照的参数，对于比较极端的情况（日出日落，夜晚，艺术化），相机能够表现的手机更好。最大的优势还是图片是 &lt;code&gt;raw&lt;/code&gt; 格式，后期空间远大于手机拍摄的 &lt;code&gt;jpg&lt;/code&gt; 格式。&lt;/p&gt;
 &lt;p&gt;特殊情况，人像拍摄，相机用大光圈镜头能够得到很好的虚化，比较容易拍出好看的照片。（手机的人像模式是通过算法虚化，现在 adobe 的软件也能够实现效果很好的虚化效果）。&lt;/p&gt;
@@ -62,37 +687,37 @@
 &lt;hr&gt;
 &lt;p&gt;如果要买相机，就考虑买主流的微单，传统的单反相机厂商早就不再更新，也太大太重了，极度影响拍摄体验。&lt;/p&gt;
 &lt;p&gt;微单会根据传感器的大小进行分级，从大到小排列，全画幅 &amp;gt; aps-c（残幅）&amp;gt; M43&lt;/p&gt;
-&lt;h1 id=&#34;全画幅&#34;&gt;全画幅&lt;/h1&gt;
-&lt;p&gt;（现在摄影圈最主流的机器群）
+&lt;h1 id=&#34;全画幅&#34;&gt;全画幅
+&lt;/h1&gt;&lt;p&gt;（现在摄影圈最主流的机器群）
 全画幅传感器最大，所以画面更加纯净，在同等光圈的情况下，虚化也最明显。同样体积最大、价钱最高。&lt;/p&gt;
 &lt;p&gt;御三家分别是索尼，佳能，尼康，次一级的厂家，松下。&lt;/p&gt;
 &lt;p&gt;索尼的对焦能力最好，副厂镜头很多很便宜。佳能拍人像好看，但是镜头贵。尼康后期宽容度大，所以拍风光的喜欢用尼康。松下视频很好，性价比高。&lt;/p&gt;
-&lt;h2 id=&#34;佳能-r8&#34;&gt;佳能 R8&lt;/h2&gt;
-&lt;p&gt;说到拍人像，佳能直出（直接导出不后期）的肤色是最好的，最省事。但是佳能后续买镜头可能比较贵。&lt;/p&gt;
+&lt;h2 id=&#34;佳能-r8&#34;&gt;佳能 R8
+&lt;/h2&gt;&lt;p&gt;说到拍人像，佳能直出（直接导出不后期）的肤色是最好的，最省事。但是佳能后续买镜头可能比较贵。&lt;/p&gt;
 &lt;p&gt;这个价格也比较高。&lt;/p&gt;
-&lt;h1 id=&#34;尼康-z5&#34;&gt;尼康 Z5&lt;/h1&gt;
-&lt;p&gt;有点老的机器，但是性价比比较高，大概 7-8k 可以买到机身，配合 24-200 这颗镜头，旅游会用得很舒服，而且尼康的照片宽容度大，对于拍风光题材的人来说，是个好选择。但是拍视频不好。&lt;/p&gt;
+&lt;h1 id=&#34;尼康-z5&#34;&gt;尼康 Z5
+&lt;/h1&gt;&lt;p&gt;有点老的机器，但是性价比比较高，大概 7-8k 可以买到机身，配合 24-200 这颗镜头，旅游会用得很舒服，而且尼康的照片宽容度大，对于拍风光题材的人来说，是个好选择。但是拍视频不好。&lt;/p&gt;
 &lt;p&gt;考虑到后期发展，还需要买其他焦段的镜头，尼康的镜头只有原厂，虽然画质很好，但是很大很重又很贵。&lt;/p&gt;
-&lt;h2 id=&#34;松下-s5一代二代都行&#34;&gt;松下 S5（一代二代都行）&lt;/h2&gt;
-&lt;p&gt;S5 突出一个性价比，1W 左右京东可以拿下双镜头套餐，一个变焦一个定焦，基本上就够用了。二代的对焦性能比一代好，其他基本一致。&lt;/p&gt;
+&lt;h2 id=&#34;松下-s5一代二代都行&#34;&gt;松下 S5（一代二代都行）
+&lt;/h2&gt;&lt;p&gt;S5 突出一个性价比，1W 左右京东可以拿下双镜头套餐，一个变焦一个定焦，基本上就够用了。二代的对焦性能比一代好，其他基本一致。&lt;/p&gt;
 &lt;p&gt;S5 还有一个特点是照片本身的色彩比较自然。&lt;/p&gt;
 &lt;p&gt;而且之前看你也拍视频发 b 站，S5 是照片视频都行的水桶机。&lt;/p&gt;
 &lt;p&gt;综合来说，这是我最推荐的全画幅机器。如果只是拍照，推荐一代。&lt;/p&gt;
-&lt;h1 id=&#34;aps-c&#34;&gt;APS-C&lt;/h1&gt;
-&lt;p&gt;这个规格的相机，御三家都不是主力机型，所以处于一个高不成低不就的状态，好的残幅相机价格也接近全画幅了，所以不怎么推荐，除了，&lt;strong&gt;富士&lt;/strong&gt;，但是富士缺货加价买不到，不推荐。&lt;/p&gt;
-&lt;h1 id=&#34;m43&#34;&gt;M43&lt;/h1&gt;
-&lt;p&gt;M43 这个规格，是奥林巴斯和松下两个厂家联合支持的规格，因此镜头群很广很便宜，而且传感器小，所以机器比较小巧防抖性能好。&lt;/p&gt;
+&lt;h1 id=&#34;aps-c&#34;&gt;APS-C
+&lt;/h1&gt;&lt;p&gt;这个规格的相机，御三家都不是主力机型，所以处于一个高不成低不就的状态，好的残幅相机价格也接近全画幅了，所以不怎么推荐，除了，&lt;strong&gt;富士&lt;/strong&gt;，但是富士缺货加价买不到，不推荐。&lt;/p&gt;
+&lt;h1 id=&#34;m43&#34;&gt;M43
+&lt;/h1&gt;&lt;p&gt;M43 这个规格，是奥林巴斯和松下两个厂家联合支持的规格，因此镜头群很广很便宜，而且传感器小，所以机器比较小巧防抖性能好。&lt;/p&gt;
 &lt;p&gt;但是 M43 被人诟病的点在于，传感器太小，画面不够纯净噪点很多，并且虚化小，难以拍出像全画幅一样大虚化的人像照片。&lt;/p&gt;
 &lt;p&gt;这些缺点也有方法解决，通过后期的 AI 降噪和虚化，只是比较麻烦。&lt;/p&gt;
-&lt;h2 id=&#34;松下-g9一代二代&#34;&gt;松下 G9（一代二代）&lt;/h2&gt;
-&lt;p&gt;G9 的性能很好，价钱也很便宜，就是有点老了，对焦可能慢一点，但是松下 M43 的拍照旗舰机，总和性能很强。&lt;/p&gt;
+&lt;h2 id=&#34;松下-g9一代二代&#34;&gt;松下 G9（一代二代）
+&lt;/h2&gt;&lt;p&gt;G9 的性能很好，价钱也很便宜，就是有点老了，对焦可能慢一点，但是松下 M43 的拍照旗舰机，总和性能很强。&lt;/p&gt;
 &lt;p&gt;最近新出了二代，M43 里面非常强，而且拍视频相比全画幅要好，等半年价格就跳水了，现在刚出价格比较高。&lt;/p&gt;
 &lt;p&gt;但是这个系列很大很重，和全画幅差不多，无法体现 M43 的轻便优势。（大机身握持感好，看你如何取舍）&lt;/p&gt;
-&lt;h2 id=&#34;奥林巴斯-om-5&#34;&gt;奥林巴斯 OM-5&lt;/h2&gt;
-&lt;p&gt;价格便宜，M43 系统的次旗舰，我用的就这个，比较小巧，价格便宜，机身 6.5k（去咸鱼上找经销商），剩下的钱可以买一堆镜头了。&lt;/p&gt;
+&lt;h2 id=&#34;奥林巴斯-om-5&#34;&gt;奥林巴斯 OM-5
+&lt;/h2&gt;&lt;p&gt;价格便宜，M43 系统的次旗舰，我用的就这个，比较小巧，价格便宜，机身 6.5k（去咸鱼上找经销商），剩下的钱可以买一堆镜头了。&lt;/p&gt;
 &lt;p&gt;有很多花里胡哨的拍照功能，但是对于拍人像本身没什么用处，不怎么推荐。&lt;/p&gt;
-&lt;h1 id=&#34;conclusion&#34;&gt;CONCLUSION&lt;/h1&gt;
-&lt;p&gt;全画幅机器虽然比较大比较贵，但是前期能够获得更好的素材，后期空间更大，推荐 S5 一代双镜头套餐，性价比很好，二代对焦好一些但是贵。&lt;/p&gt;
+&lt;h1 id=&#34;conclusion&#34;&gt;CONCLUSION
+&lt;/h1&gt;&lt;p&gt;全画幅机器虽然比较大比较贵，但是前期能够获得更好的素材，后期空间更大，推荐 S5 一代双镜头套餐，性价比很好，二代对焦好一些但是贵。&lt;/p&gt;
 &lt;p&gt;M43 的优势在于镜头很多很便宜，二手镜头流通率很高，而且机身小巧轻便。但是对于人像拍摄由于虚化小有些劣势（人像拍摄不一定要大虚化，但是虚化强会容易出片一点）。
 还有一点，M43 在摄影圈容易被全画幅老法师鄙视，容易让人动摇想换器材。&lt;/p&gt;
 &lt;p&gt;相机机身有时候不如镜头重要，拍人像最重要的是有个大光圈镜头，所以预算不能全用在机身上，要考虑后续能配什么镜头。&lt;/p&gt;
@@ -100,14 +725,14 @@
         </item>
         <item>
         <title>网站配置方案</title>
-        <link>https://kanrw.github.io/p/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88/</link>
+        <link>http://localhost:1313/p/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88/</link>
         <pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://kanrw.github.io/p/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88/</guid>
-        <description>&lt;h1 id=&#34;框架---hugo&#34;&gt;框架 - Hugo&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;选择这个框架的原因&lt;/strong&gt;，主要还是感觉大家更加推崇这个框架，虽然模板比较少，但是渲染速度快（对于以后有长期更新需求的来说，这点很关键），而且部署比较方便，Github 上 star 数量排静态博客第一，这种时候相信大多数人的选择一般不会有太大问题。&lt;/p&gt;
-&lt;h2 id=&#34;基础安装&#34;&gt;基础安装&lt;/h2&gt;
-&lt;p&gt;组装工具之前，先把零件准备好，这几个都是成熟的东西，安装很简单，一直点继续就行&lt;/p&gt;
+        <guid>http://localhost:1313/p/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88/</guid>
+        <description>&lt;h1 id=&#34;框架---hugo&#34;&gt;框架 - Hugo
+&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;选择这个框架的原因&lt;/strong&gt;，主要还是感觉大家更加推崇这个框架，虽然模板比较少，但是渲染速度快（对于以后有长期更新需求的来说，这点很关键），而且部署比较方便，Github 上 star 数量排静态博客第一，这种时候相信大多数人的选择一般不会有太大问题。&lt;/p&gt;
+&lt;h2 id=&#34;基础安装&#34;&gt;基础安装
+&lt;/h2&gt;&lt;p&gt;组装工具之前，先把零件准备好，这几个都是成熟的东西，安装很简单，一直点继续就行&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;Go&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Git&lt;/code&gt;&lt;/li&gt;
@@ -129,8 +754,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go version go1.19.4 windows/amd64
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;生成基础配置&#34;&gt;生成基础配置&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h2 id=&#34;生成基础配置&#34;&gt;生成基础配置
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -162,12 +787,12 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;config.toml &lt;span class=&#34;c1&#34;&gt;# 站点全局的参数配置文件&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;下载主题并调整&#34;&gt;下载主题并调整&lt;/h2&gt;
-&lt;p&gt;主题到官方网站下载 &lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/div&gt;&lt;h2 id=&#34;下载主题并调整&#34;&gt;下载主题并调整
+&lt;/h2&gt;&lt;p&gt;主题到官方网站下载 &lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Complete List | Hugo Themes&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;填充内容&#34;&gt;填充内容&lt;/h2&gt;
-&lt;h2 id=&#34;预览界面&#34;&gt;预览界面&lt;/h2&gt;
-&lt;p&gt;即使只是刚刚下载好主题，网站内空空如也，肯定也忍不住先看一眼它长什么样，以后会经常这么操作，来回修改。&lt;/p&gt;
+&lt;h2 id=&#34;填充内容&#34;&gt;填充内容
+&lt;/h2&gt;&lt;h2 id=&#34;预览界面&#34;&gt;预览界面
+&lt;/h2&gt;&lt;p&gt;即使只是刚刚下载好主题，网站内空空如也，肯定也忍不住先看一眼它长什么样，以后会经常这么操作，来回修改。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -178,8 +803,8 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;然后用浏览器打开&lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;本地网页&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;生成静态页面&#34;&gt;生成静态页面&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h2 id=&#34;生成静态页面&#34;&gt;生成静态页面
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -188,13 +813,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这里可以指定主题和其他内容生成静态页面，生成的内容会放到 &lt;code&gt;/public&lt;/code&gt; 下，**需要推送到 &lt;code&gt;github&lt;/code&gt; 上的是 `/publlic&lt;/p&gt;
-&lt;h1 id=&#34;github-pages&#34;&gt;&lt;code&gt;GitHub Pages&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;code&gt;GitHubPages&lt;/code&gt; 是一项静态站点托管服务，它直接从 GitHub 上的仓库获取 index. html、HTML、CSS 和 JavaScript 文件，也可以通过构建过程运行文件，然后发布网站。我们使用 &lt;code&gt;GitHubPages&lt;/code&gt; 搭建个人网站。&lt;/p&gt;
+&lt;h1 id=&#34;github-pages&#34;&gt;&lt;code&gt;GitHub Pages&lt;/code&gt;
+&lt;/h1&gt;&lt;p&gt;&lt;code&gt;GitHubPages&lt;/code&gt; 是一项静态站点托管服务，它直接从 GitHub 上的仓库获取 index. html、HTML、CSS 和 JavaScript 文件，也可以通过构建过程运行文件，然后发布网站。我们使用 &lt;code&gt;GitHubPages&lt;/code&gt; 搭建个人网站。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;一个很重要的点是，&lt;code&gt;hugo&lt;/code&gt; 生成的网站内容在文件夹下的 &lt;code&gt;public&lt;/code&gt; 之中&lt;/strong&gt;，所以别人 &lt;code&gt;git&lt;/code&gt; 的命令都是先切进这个文件夹，外面的文件夹我想叫什么都无所谓。&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://kanrw.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Here is my website!&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;推送到-github&#34;&gt;推送到 &lt;code&gt;Github&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;网站配置好，就需要推送到 &lt;code&gt;GitHub&lt;/code&gt; 才能让别人也看到。&lt;/p&gt;
+&lt;h2 id=&#34;推送到-github&#34;&gt;推送到 &lt;code&gt;Github&lt;/code&gt;
+&lt;/h2&gt;&lt;p&gt;网站配置好，就需要推送到 &lt;code&gt;GitHub&lt;/code&gt; 才能让别人也看到。&lt;/p&gt;
 &lt;p&gt;由于网络的原因，所以还是用 &lt;code&gt;ssh&lt;/code&gt; 的方式连接账户比较的稳定。&lt;/p&gt;
 </description>
         </item>

@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>WorkFlow on Kanrw</title>
-        <link>https://kanrw.github.io/tags/workflow/</link>
+        <link>http://localhost:1313/tags/workflow/</link>
         <description>Recent content in WorkFlow on Kanrw</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 31 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kanrw.github.io/tags/workflow/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 31 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/workflow/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Crash写作法</title>
-        <link>https://kanrw.github.io/p/crash%E5%86%99%E4%BD%9C%E6%B3%95/</link>
+        <link>http://localhost:1313/p/crash%E5%86%99%E4%BD%9C%E6%B3%95/</link>
         <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://kanrw.github.io/p/crash%E5%86%99%E4%BD%9C%E6%B3%95/</guid>
+        <guid>http://localhost:1313/p/crash%E5%86%99%E4%BD%9C%E6%B3%95/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.sohu.com/a/411100479_752169&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;石黑一雄的崩溃式写作法｜我是如何在四周内完成一部长篇小说的？&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;我们都有完美主义倾向，希望事情按照我们的设想进行。我们希望写作的时候没有别的事情来打扰，写出来的文字优美流畅，不用修改。写作的时候文思泉涌。然而大部分时候我们面临的情况都不可能如此完美，所以大部分时候我们都在拖延，都在面对一团乱码，手足无措。&lt;/p&gt;
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction
+&lt;/h1&gt;&lt;p&gt;我们都有完美主义倾向，希望事情按照我们的设想进行。我们希望写作的时候没有别的事情来打扰，写出来的文字优美流畅，不用修改。写作的时候文思泉涌。然而大部分时候我们面临的情况都不可能如此完美，所以大部分时候我们都在拖延，都在面对一团乱码，手足无措。&lt;/p&gt;
 &lt;p&gt;高中的时候 #Author/石黑一雄 获得了诺奖，由于文化有限，想着追赶一下文学潮流，便买了他的获奖作品 #Author/石黑一雄/被掩埋的巨人 ，后来陆陆续续地看完了他的大部分作品。后来刷到一个他的访谈，聊到他是如何写作的。他说，自己在写 #Author/石黑一雄/长日留痕 的时候，他早早写完了第一章的内容，但是隔了一年，后面的内容迟迟写不出来，于是他决定采取一个“疯狂”的方法。有很多人采取过类似的方案进行写作，只是拥有很多名字，例如 #Author/石黑一雄 叫它‘Crash（崩溃式）写作法’，小红书上有人叫它‘呕吐式写作法’（vomit writing），或者更传统一点，可以叫做‘头脑风暴’或者说是‘思维导图’。&lt;/p&gt;
-&lt;h1 id=&#34;石黑一雄的写作方法&#34;&gt;石黑一雄的写作方法&lt;/h1&gt;
-&lt;blockquote&gt;
+&lt;h1 id=&#34;石黑一雄的写作方法&#34;&gt;石黑一雄的写作方法
+&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;石黑一雄的方法
 在实施“崩溃”计划期间，我肆无忌惮地写作，既不在意文体，也不在意自己下午所写的内容与当日早上所创作的内容相左。我优先考虑的，是让想法跃然纸上，逐渐生发。糟糕的句子，可怕的对话，无用的场景——这些我都一并保留，然后继续笔耕不缀。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;虽然在这个计划期间写出来内容肯定非常粗糙，但是已经完成了写作最重要、最困难的一步，发挥了想象力，完成了框架的建构，剩下的就是缝缝补补。&lt;/p&gt;
 &lt;p&gt;另一种呕吐法也是一样，&lt;strong&gt;在呕吐的时候不会在意形象，尽情的发泄出来，最后整理这一堆垃圾，从中找出有用的部分。&lt;/strong&gt;
 这种方法还有一个好处，就是当我们面对一团乱麻无从下手的时候，在‘呕吐物’中翻找的过程，也是整理思路的过程。从中可以梳理出 #WorkFlow/主线任务 和相应的 #WorkFlow/支线任务 。&lt;/p&gt;
-&lt;h1 id=&#34;具体操作&#34;&gt;具体操作&lt;/h1&gt;
-&lt;p&gt;这些方法其实也有前提，我们要想输出，前提是有输入，这个方法只是让我们克服不敢输出的问题。要想有东西可吐，首先也要肚子里吃了东西。作为科研写作方法，可不能凭空虚构内容出来。&lt;/p&gt;
+&lt;h1 id=&#34;具体操作&#34;&gt;具体操作
+&lt;/h1&gt;&lt;p&gt;这些方法其实也有前提，我们要想输出，前提是有输入，这个方法只是让我们克服不敢输出的问题。要想有东西可吐，首先也要肚子里吃了东西。作为科研写作方法，可不能凭空虚构内容出来。&lt;/p&gt;
 &lt;p&gt;日常写作中也是一样的，包括这个文档，完全可以随意输出，后续再整理。我平常写不出来文章，一是我的思维确实比较的零碎，导致我和别人交流的时候会出现别人搞不懂我的问题的情况；另一个也是我没有整理的习惯，这导致没有什么成体系的输出， #Website 的输出也这样操作。 ^5f9f7e&lt;/p&gt;
-&lt;h2 id=&#34;writing-in-crash&#34;&gt;Writing in Crash&lt;/h2&gt;
-&lt;p&gt;首先选择几篇和我目标成品感觉相近的文章，还有一些我过去看过的作为理论基础的文章，一开始就这么多够了。边读边写，想到什么写什么，不需要顾虑框架，不需要考虑顺序，任由大脑发挥想象力，有要补充的内容就先简单标记，等到下一个阶段再润色补充。&lt;/p&gt;
+&lt;h2 id=&#34;writing-in-crash&#34;&gt;Writing in Crash
+&lt;/h2&gt;&lt;p&gt;首先选择几篇和我目标成品感觉相近的文章，还有一些我过去看过的作为理论基础的文章，一开始就这么多够了。边读边写，想到什么写什么，不需要顾虑框架，不需要考虑顺序，任由大脑发挥想象力，有要补充的内容就先简单标记，等到下一个阶段再润色补充。&lt;/p&gt;
 &lt;p&gt;关键在于，&lt;strong&gt;保证连续性，不要考虑任何打断连续输出的事情&lt;/strong&gt;，包括但不限于复杂的分段，标点，文件命名，就选择&lt;strong&gt;一个文件&lt;/strong&gt;来写。&lt;/p&gt;
 &lt;p&gt;一般 #Literature/PRB 正文 2k 字，换算成中文（毕竟我用中文才能最迅速的输出）大概为三倍，即 6k 字，按照小红书的说法，写到一半的字数就可以开始整理了，与扩展、完善了。&lt;/p&gt;
-&lt;h2 id=&#34;arrange&#34;&gt;Arrange&lt;/h2&gt;
-&lt;p&gt;等到输出完毕，再重新整理所有的内容，将碎片放到合适的地方。整个过程其实类似于卡片式写作法, [[TAGandBOOKMARK-make it grow]],让文章生长出来。&lt;/p&gt;
-&lt;h1 id=&#34;实践之后的感受&#34;&gt;实践之后的感受&lt;/h1&gt;
-&lt;p&gt;平常我就是一个，思维比较跳脱，比较碎片化的人，这些碎片在我脑海中虽然拥有联系，但是别人和我的思维方式、储备都不同，这也是为什么别人很可能听不懂我在说什么。&lt;/p&gt;
+&lt;h2 id=&#34;arrange&#34;&gt;Arrange
+&lt;/h2&gt;&lt;p&gt;等到输出完毕，再重新整理所有的内容，将碎片放到合适的地方。整个过程其实类似于卡片式写作法, [[TAGandBOOKMARK-make it grow]],让文章生长出来。&lt;/p&gt;
+&lt;h1 id=&#34;实践之后的感受&#34;&gt;实践之后的感受
+&lt;/h1&gt;&lt;p&gt;平常我就是一个，思维比较跳脱，比较碎片化的人，这些碎片在我脑海中虽然拥有联系，但是别人和我的思维方式、储备都不同，这也是为什么别人很可能听不懂我在说什么。&lt;/p&gt;
 &lt;p&gt;这在我爸看来就是思维没有深度，他要求与希望所有‘说出口’的内容都是已经经过了细致的思考与组织的。但是每个人思维方式都不同，我也不强求，我不是一个追求伟大事业的人，适合自己就好。&lt;/p&gt;
 &lt;p&gt;这个方案经过我的尝试，就很合适。之前写 [[TAGandBOOKMARK-make it grow]] 就是因为，我有很多冒出来的想法，不知道如何组织，同时它们涌现得太多太快，让我在其中迷失。&lt;/p&gt;
 &lt;p&gt;我以前很喜欢写日记，这个过程就是让我和自己对话，整理自己的思绪。现在科研中也是一样的，让我能够看到未来的方向，想明白真正需要做的是什么事情。[[Crash-231101]]&lt;/p&gt;
 &lt;p&gt;[[网站更新计划]] 我的网站更新其实也可以被吸纳进我的 #WorkFlow/Writing 之中，我的思想，从碎片的 #WorkFlow/Softwares/flomo ,被整理到了 #WorkFlow/Softwares/Obsidian 之中，可能在 ob 之中的内容很多还是像 crash 一样，所以最后进行整理和精炼，来到了我的 #Website 上。这可以是我最近晚上的内容了。&lt;/p&gt;
-&lt;h1 id=&#34;延伸&#34;&gt;延伸&lt;/h1&gt;
-&lt;p&gt;更进一步，为了充分发挥其整理思路的作用，把我混乱的生活整理起来，每天早上到办公室后的第一件事，应该是拿出小本本，把想到的事情都写下来画个图，自然就能知道当天的主线任务和支线任务了。&lt;/p&gt;
+&lt;h1 id=&#34;延伸&#34;&gt;延伸
+&lt;/h1&gt;&lt;p&gt;更进一步，为了充分发挥其整理思路的作用，把我混乱的生活整理起来，每天早上到办公室后的第一件事，应该是拿出小本本，把想到的事情都写下来画个图，自然就能知道当天的主线任务和支线任务了。&lt;/p&gt;
 &lt;p&gt;人生如戏，把科研当作人生的任务，其中也有主线任务和支线任务，尽力而为，做完下班（做不完明天再说）。&lt;/p&gt;
 </description>
         </item>

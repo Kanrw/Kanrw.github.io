@@ -2,24 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on Kanrw</title>
-        <link>https://kanrw.github.io/page/</link>
+        <link>http://localhost:1313/page/</link>
         <description>Recent content in Pages on Kanrw</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kanrw.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Archives</title>
-        <link>https://kanrw.github.io/archives/</link>
+        <link>http://localhost:1313/archives/</link>
         <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://kanrw.github.io/archives/</guid>
+        <guid>http://localhost:1313/archives/</guid>
         <description></description>
         </item>
         <item>
-        <title>Search</title>
-        <link>https://kanrw.github.io/search/</link>
+        <title>About</title>
+        <link>http://localhost:1313/about/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://kanrw.github.io/search/</guid>
+        <guid>http://localhost:1313/about/</guid>
+        <description>&lt;p&gt;这个网站只是为了记录，单纯地记录。让我能够在读博的漫长时光中留下点什么。&lt;/p&gt;
+&lt;p&gt;关于这个网站的细节，你可以通过首页的 &lt;code&gt;Tags: Website&lt;/code&gt; 快速找到（&lt;em&gt;之所以不用超链接的方式让你看到那个页面，是因为我只是套模板，很多东西不知道怎么微调&lt;/em&gt;）。里面包括了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;建立网站的动机（这可能是这个 &lt;code&gt;Tag&lt;/code&gt; 下最无聊的一篇了）&lt;/li&gt;
+&lt;li&gt;如何从头开始建立一个网站&lt;/li&gt;
+&lt;li&gt;网站内容的结构&lt;/li&gt;
+&lt;li&gt;（尝试能否利用 markdown 的链接关联文件）&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;利用网站的分类和标签系统，你还能快速找到更多有用的东西。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Search</title>
+        <link>http://localhost:1313/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/search/</guid>
         <description></description>
         </item>
         

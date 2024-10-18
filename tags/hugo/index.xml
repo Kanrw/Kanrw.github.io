@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Hugo on Kanrw</title>
-        <link>https://kanrw.github.io/tags/hugo/</link>
+        <link>http://localhost:1313/tags/hugo/</link>
         <description>Recent content in Hugo on Kanrw</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 29 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kanrw.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 29 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>网站配置方案</title>
-        <link>https://kanrw.github.io/p/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88/</link>
+        <link>http://localhost:1313/p/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88/</link>
         <pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://kanrw.github.io/p/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88/</guid>
-        <description>&lt;h1 id=&#34;框架---hugo&#34;&gt;框架 - Hugo&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;选择这个框架的原因&lt;/strong&gt;，主要还是感觉大家更加推崇这个框架，虽然模板比较少，但是渲染速度快（对于以后有长期更新需求的来说，这点很关键），而且部署比较方便，Github 上 star 数量排静态博客第一，这种时候相信大多数人的选择一般不会有太大问题。&lt;/p&gt;
-&lt;h2 id=&#34;基础安装&#34;&gt;基础安装&lt;/h2&gt;
-&lt;p&gt;组装工具之前，先把零件准备好，这几个都是成熟的东西，安装很简单，一直点继续就行&lt;/p&gt;
+        <guid>http://localhost:1313/p/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88/</guid>
+        <description>&lt;h1 id=&#34;框架---hugo&#34;&gt;框架 - Hugo
+&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;选择这个框架的原因&lt;/strong&gt;，主要还是感觉大家更加推崇这个框架，虽然模板比较少，但是渲染速度快（对于以后有长期更新需求的来说，这点很关键），而且部署比较方便，Github 上 star 数量排静态博客第一，这种时候相信大多数人的选择一般不会有太大问题。&lt;/p&gt;
+&lt;h2 id=&#34;基础安装&#34;&gt;基础安装
+&lt;/h2&gt;&lt;p&gt;组装工具之前，先把零件准备好，这几个都是成熟的东西，安装很简单，一直点继续就行&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;Go&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Git&lt;/code&gt;&lt;/li&gt;
@@ -37,8 +37,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go version go1.19.4 windows/amd64
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;生成基础配置&#34;&gt;生成基础配置&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h2 id=&#34;生成基础配置&#34;&gt;生成基础配置
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -70,12 +70,12 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;config.toml &lt;span class=&#34;c1&#34;&gt;# 站点全局的参数配置文件&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;下载主题并调整&#34;&gt;下载主题并调整&lt;/h2&gt;
-&lt;p&gt;主题到官方网站下载 &lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/div&gt;&lt;h2 id=&#34;下载主题并调整&#34;&gt;下载主题并调整
+&lt;/h2&gt;&lt;p&gt;主题到官方网站下载 &lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Complete List | Hugo Themes&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;填充内容&#34;&gt;填充内容&lt;/h2&gt;
-&lt;h2 id=&#34;预览界面&#34;&gt;预览界面&lt;/h2&gt;
-&lt;p&gt;即使只是刚刚下载好主题，网站内空空如也，肯定也忍不住先看一眼它长什么样，以后会经常这么操作，来回修改。&lt;/p&gt;
+&lt;h2 id=&#34;填充内容&#34;&gt;填充内容
+&lt;/h2&gt;&lt;h2 id=&#34;预览界面&#34;&gt;预览界面
+&lt;/h2&gt;&lt;p&gt;即使只是刚刚下载好主题，网站内空空如也，肯定也忍不住先看一眼它长什么样，以后会经常这么操作，来回修改。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -86,8 +86,8 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;然后用浏览器打开&lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;本地网页&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;生成静态页面&#34;&gt;生成静态页面&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h2 id=&#34;生成静态页面&#34;&gt;生成静态页面
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -96,13 +96,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这里可以指定主题和其他内容生成静态页面，生成的内容会放到 &lt;code&gt;/public&lt;/code&gt; 下，**需要推送到 &lt;code&gt;github&lt;/code&gt; 上的是 `/publlic&lt;/p&gt;
-&lt;h1 id=&#34;github-pages&#34;&gt;&lt;code&gt;GitHub Pages&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;code&gt;GitHubPages&lt;/code&gt; 是一项静态站点托管服务，它直接从 GitHub 上的仓库获取 index. html、HTML、CSS 和 JavaScript 文件，也可以通过构建过程运行文件，然后发布网站。我们使用 &lt;code&gt;GitHubPages&lt;/code&gt; 搭建个人网站。&lt;/p&gt;
+&lt;h1 id=&#34;github-pages&#34;&gt;&lt;code&gt;GitHub Pages&lt;/code&gt;
+&lt;/h1&gt;&lt;p&gt;&lt;code&gt;GitHubPages&lt;/code&gt; 是一项静态站点托管服务，它直接从 GitHub 上的仓库获取 index. html、HTML、CSS 和 JavaScript 文件，也可以通过构建过程运行文件，然后发布网站。我们使用 &lt;code&gt;GitHubPages&lt;/code&gt; 搭建个人网站。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;一个很重要的点是，&lt;code&gt;hugo&lt;/code&gt; 生成的网站内容在文件夹下的 &lt;code&gt;public&lt;/code&gt; 之中&lt;/strong&gt;，所以别人 &lt;code&gt;git&lt;/code&gt; 的命令都是先切进这个文件夹，外面的文件夹我想叫什么都无所谓。&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://kanrw.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Here is my website!&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;推送到-github&#34;&gt;推送到 &lt;code&gt;Github&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;网站配置好，就需要推送到 &lt;code&gt;GitHub&lt;/code&gt; 才能让别人也看到。&lt;/p&gt;
+&lt;h2 id=&#34;推送到-github&#34;&gt;推送到 &lt;code&gt;Github&lt;/code&gt;
+&lt;/h2&gt;&lt;p&gt;网站配置好，就需要推送到 &lt;code&gt;GitHub&lt;/code&gt; 才能让别人也看到。&lt;/p&gt;
 &lt;p&gt;由于网络的原因，所以还是用 &lt;code&gt;ssh&lt;/code&gt; 的方式连接账户比较的稳定。&lt;/p&gt;
 </description>
         </item>
