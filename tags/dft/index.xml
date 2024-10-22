@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>DFT on Kanrw</title>
-        <link>http://localhost:1313/tags/dft/</link>
+        <link>https://kanrw.github.io/tags/dft/</link>
         <description>Recent content in DFT on Kanrw</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 03 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/dft/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 03 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kanrw.github.io/tags/dft/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>ABACUS简明手册</title>
-        <link>http://localhost:1313/p/abacus%E7%AE%80%E6%98%8E%E6%89%8B%E5%86%8C/</link>
+        <link>https://kanrw.github.io/p/abacus%E7%AE%80%E6%98%8E%E6%89%8B%E5%86%8C/</link>
         <pubDate>Sat, 03 Feb 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/abacus%E7%AE%80%E6%98%8E%E6%89%8B%E5%86%8C/</guid>
+        <guid>https://kanrw.github.io/p/abacus%E7%AE%80%E6%98%8E%E6%89%8B%E5%86%8C/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://abacus.ustc.edu.cn/main.htm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Abacus&lt;/a&gt;
@@ -93,7 +93,7 @@
 &lt;/ul&gt;
 &lt;p&gt;计算需要赝势库 &lt;a class=&#34;link&#34; href=&#34;https://abacus.ustc.edu.cn/pseudo/list.htm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;PSEUDOPOTENTIALS AND ORBITALS&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/Pasted%20image%2020240109171014.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://kanrw.github.io/Pasted%20image%2020240109171014.png&#34;
 	
 	
 	

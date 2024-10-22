@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Photography on Kanrw</title>
-        <link>https://kanrw.github.io/tags/photography/</link>
-        <description>Recent content in Photography on Kanrw</description>
+        <title>DAILY on Kanrw</title>
+        <link>https://kanrw.github.io/categories/daily/</link>
+        <description>Recent content in DAILY on Kanrw</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 24 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kanrw.github.io/tags/photography/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 24 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kanrw.github.io/categories/daily/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>相机选购指南-偏人像</title>
         <link>https://kanrw.github.io/p/%E7%9B%B8%E6%9C%BA%E9%80%89%E8%B4%AD%E6%8C%87%E5%8D%97-%E5%81%8F%E4%BA%BA%E5%83%8F/</link>
         <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>

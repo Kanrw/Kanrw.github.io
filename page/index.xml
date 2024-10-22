@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on Kanrw</title>
-        <link>http://localhost:1313/page/</link>
+        <link>https://kanrw.github.io/page/</link>
         <description>Recent content in Pages on Kanrw</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kanrw.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Archives</title>
-        <link>http://localhost:1313/archives/</link>
+        <link>https://kanrw.github.io/archives/</link>
         <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/archives/</guid>
+        <guid>https://kanrw.github.io/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>About</title>
-        <link>http://localhost:1313/about/</link>
+        <link>https://kanrw.github.io/about/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/about/</guid>
+        <guid>https://kanrw.github.io/about/</guid>
         <description>&lt;p&gt;这个网站只是为了记录，单纯地记录。让我能够在读博的漫长时光中留下点什么。&lt;/p&gt;
 &lt;p&gt;关于这个网站的细节，你可以通过首页的 &lt;code&gt;Tags: Website&lt;/code&gt; 快速找到（&lt;em&gt;之所以不用超链接的方式让你看到那个页面，是因为我只是套模板，很多东西不知道怎么微调&lt;/em&gt;）。里面包括了：&lt;/p&gt;
 &lt;ul&gt;
@@ -34,10 +34,10 @@
         </item>
         <item>
         <title>Search</title>
-        <link>http://localhost:1313/search/</link>
+        <link>https://kanrw.github.io/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/search/</guid>
+        <guid>https://kanrw.github.io/search/</guid>
         <description></description>
         </item>
         

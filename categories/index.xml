@@ -2,49 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on Kanrw</title>
-        <link>http://localhost:1313/categories/</link>
+        <link>https://kanrw.github.io/categories/</link>
         <description>Recent content in Categories on Kanrw</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 03 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>DFT</title>
-        <link>http://localhost:1313/categories/dft/</link>
-        <pubDate>Sat, 03 Feb 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/categories/dft/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Manual</title>
-        <link>http://localhost:1313/categories/manual/</link>
-        <pubDate>Sat, 03 Feb 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/categories/manual/</guid>
-        <description></description>
-        </item>
-        <item>
+        <lastBuildDate>Sat, 03 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kanrw.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>TECHNICS</title>
-        <link>http://localhost:1313/categories/technics/</link>
-        <pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>
+        <link>https://kanrw.github.io/categories/technics/</link>
+        <pubDate>Sat, 03 Feb 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/technics/</guid>
-        <description>&lt;img src="http://localhost:1313/categories/technics/cover.jpg" alt="Featured image of post TECHNICS" /&gt;</description>
-        </item>
-        <item>
-        <title>READING</title>
-        <link>http://localhost:1313/categories/reading/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/categories/reading/</guid>
-        <description>&lt;img src="http://localhost:1313/categories/reading/2.jpg" alt="Featured image of post READING" /&gt;</description>
+        <guid>https://kanrw.github.io/categories/technics/</guid>
+        <description>&lt;img src="https://kanrw.github.io/categories/technics/cover.jpg" alt="Featured image of post TECHNICS" /&gt;</description>
         </item>
         <item>
         <title>THINKING</title>
-        <link>http://localhost:1313/categories/thinking/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <link>https://kanrw.github.io/categories/thinking/</link>
+        <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/thinking/</guid>
-        <description>&lt;img src="http://localhost:1313/categories/thinking/cover.jpg" alt="Featured image of post THINKING" /&gt;</description>
+        <guid>https://kanrw.github.io/categories/thinking/</guid>
+        <description>&lt;img src="https://kanrw.github.io/categories/thinking/cover.jpg" alt="Featured image of post THINKING" /&gt;</description>
+        </item>
+        <item>
+        <title>DAILY</title>
+        <link>https://kanrw.github.io/categories/daily/</link>
+        <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://kanrw.github.io/categories/daily/</guid>
+        <description>&lt;img src="https://kanrw.github.io/categories/daily/2.jpg" alt="Featured image of post DAILY" /&gt;</description>
         </item>
         
     </channel>

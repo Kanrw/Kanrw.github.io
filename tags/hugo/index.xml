@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Hugo on Kanrw</title>
-        <link>http://localhost:1313/tags/hugo/</link>
+        <link>https://kanrw.github.io/tags/hugo/</link>
         <description>Recent content in Hugo on Kanrw</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 29 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 29 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kanrw.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>网站配置方案</title>
-        <link>http://localhost:1313/p/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88/</link>
+        <link>https://kanrw.github.io/p/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88/</link>
         <pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88/</guid>
+        <guid>https://kanrw.github.io/p/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88/</guid>
         <description>&lt;h1 id=&#34;框架---hugo&#34;&gt;框架 - Hugo
 &lt;/h1&gt;&lt;p&gt;&lt;strong&gt;选择这个框架的原因&lt;/strong&gt;，主要还是感觉大家更加推崇这个框架，虽然模板比较少，但是渲染速度快（对于以后有长期更新需求的来说，这点很关键），而且部署比较方便，Github 上 star 数量排静态博客第一，这种时候相信大多数人的选择一般不会有太大问题。&lt;/p&gt;
 &lt;h2 id=&#34;基础安装&#34;&gt;基础安装
